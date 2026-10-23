@@ -1,0 +1,293 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="t d">
+<title id="t">Panel holográfico del Grupo 17</title>
+<desc id="d">Columnas de código, una lista con los cinco integrantes en línea y un anillo doble luminoso.</desc>
+<defs><filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><radialGradient id="aura" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#5fb8ba" stop-opacity=".22"/><stop offset="1" stop-color="#5fb8ba" stop-opacity="0"/></radialGradient><linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".12" stop-color="#fff"/><stop offset=".85" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><mask id="m"><rect width="900" height="520" fill="url(#fade)"/></mask></defs>
+<ellipse cx="660" cy="270" rx="270" ry="230" fill="url(#aura)"/>
+<g mask="url(#m)" font-family="Courier New, monospace" font-size="7.5" fill="#bfe0e2">
+<text x="30" y="24" opacity="0.55">9B95 8307 CD8A</text>
+<text x="30" y="35" opacity="0.4">1464 6A32</text>
+<text x="30" y="46" opacity="0.28">2F4D A0DB 1B1F</text>
+<text x="30" y="57" opacity="0.28">C736 7B18</text>
+<text x="30" y="68" opacity="0.14">6489 BA5A 38A0</text>
+<text x="30" y="79" opacity="0.14">0E8F 1698 2F04</text>
+<text x="30" y="90" opacity="0.4">C568 4361 9AA1</text>
+<text x="30" y="101" opacity="0.2">298C F227 7859</text>
+<text x="30" y="112" opacity="0.14">CF7D E2E6 7FA6</text>
+<text x="30" y="123" opacity="0.28">D1A5 7AB5</text>
+<text x="30" y="134" opacity="0.2">DBE2 3065 EEE4</text>
+<text x="30" y="145" opacity="0.55">E098 50EA A618</text>
+<text x="30" y="156" opacity="0.14">03F9 630E</text>
+<text x="30" y="167" opacity="0.55">0C3D 1168</text>
+<text x="30" y="178" opacity="0.28">BDC0 A219 AA3A</text>
+<text x="30" y="189" opacity="0.2">F9E3 872D</text>
+<text x="30" y="200" opacity="0.28">FB46 492D</text>
+<text x="30" y="211" opacity="0.4">445A F9D2 7547</text>
+<text x="30" y="222" opacity="0.4">E497 F86B 03AF</text>
+<text x="30" y="233" opacity="0.14">2C75 2929 AEA4</text>
+<text x="30" y="244" opacity="0.2">9CA4 D387 66BD</text>
+<text x="30" y="255" opacity="0.4">29C6 A011 BFCD</text>
+<text x="30" y="266" opacity="0.55">9E5D 666B 67C2</text>
+<text x="30" y="277" opacity="0.4">B4FE 247D</text>
+<text x="30" y="288" opacity="0.4">CCFA 7AC6</text>
+<text x="30" y="299" opacity="0.2">0F3D F35F 08F4</text>
+<text x="30" y="310" opacity="0.2">8413 9E12</text>
+<text x="30" y="321" opacity="0.28">9C81 0921 89BF</text>
+<text x="30" y="332" opacity="0.2">1BBF EAFB</text>
+<text x="30" y="343" opacity="0.2">3B4C 321C</text>
+<text x="30" y="354" opacity="0.14">46E1 8033 4F79</text>
+<text x="30" y="365" opacity="0.28">A0D2 C0E3 AAE1</text>
+<text x="30" y="376" opacity="0.4">E934 2A14</text>
+<text x="30" y="387" opacity="0.55">9D23 C1FD</text>
+<text x="30" y="398" opacity="0.4">7C47 A7AF A636</text>
+<text x="30" y="409" opacity="0.55">6EDB D163 7081</text>
+<text x="30" y="420" opacity="0.28">DC10 0AA5 BA78</text>
+<text x="30" y="431" opacity="0.55">E340 4E4E 005C</text>
+<text x="30" y="442" opacity="0.4">3866 40EA 4F7D</text>
+<text x="30" y="453" opacity="0.28">EF25 37F7 9388</text>
+<text x="30" y="464" opacity="0.28">8C0E 8566 31B3</text>
+<text x="30" y="475" opacity="0.14">BA76 550F</text>
+<text x="30" y="486" opacity="0.14">DDAE 1022 59C1</text>
+<text x="30" y="497" opacity="0.2">5A5A AF7E 9D65</text>
+<text x="102" y="24" opacity="0.55">9E91 A4A1 0932</text>
+<text x="102" y="35" opacity="0.28">62B5 FFA4</text>
+<text x="102" y="46" opacity="0.4">67D0 762D 7F89</text>
+<text x="102" y="57" opacity="0.55">AE4A 882F</text>
+<text x="102" y="68" opacity="0.28">C05D A061 F93B</text>
+<text x="102" y="79" opacity="0.28">9717 0F2D 1CB7</text>
+<text x="102" y="90" opacity="0.55">8910 8B07 4E1A</text>
+<text x="102" y="101" opacity="0.14">1698 60BD 388C</text>
+<text x="102" y="112" opacity="0.55">4915 E935</text>
+<text x="102" y="123" opacity="0.14">667B 9F02</text>
+<text x="102" y="134" opacity="0.4">53AF C0DE 6030</text>
+<text x="102" y="145" opacity="0.28">656C 3866 84B4</text>
+<text x="102" y="156" opacity="0.55">22F9 DDA6 7798</text>
+<text x="102" y="167" opacity="0.4">56CA 7806 AB9E</text>
+<text x="102" y="178" opacity="0.28">C856 18DB 75AF</text>
+<text x="102" y="189" opacity="0.14">5663 3DA1</text>
+<text x="102" y="200" opacity="0.2">4B80 6BD2</text>
+<text x="102" y="211" opacity="0.28">2DBB 76A4 FD11</text>
+<text x="102" y="222" opacity="0.2">112A D5BB 810D</text>
+<text x="102" y="233" opacity="0.4">0A74 251D</text>
+<text x="102" y="244" opacity="0.4">1A27 0004</text>
+<text x="102" y="255" opacity="0.55">A6A0 1F45</text>
+<text x="102" y="266" opacity="0.2">21A7 A68F 667E</text>
+<text x="102" y="277" opacity="0.2">DEFC 33C5</text>
+<text x="102" y="288" opacity="0.55">9316 50D5 545B</text>
+<text x="102" y="299" opacity="0.28">9C81 8F95</text>
+<text x="102" y="310" opacity="0.55">218B FDD5</text>
+<text x="102" y="321" opacity="0.14">F1F8 129C</text>
+<text x="102" y="332" opacity="0.2">13E6 2D8A 0BBF</text>
+<text x="102" y="343" opacity="0.55">9DC9 3587</text>
+<text x="102" y="354" opacity="0.2">A44A 22A5 4A9D</text>
+<text x="102" y="365" opacity="0.55">6C3C 0FE8</text>
+<text x="102" y="376" opacity="0.4">4C9F A197 612D</text>
+<text x="102" y="387" opacity="0.4">868C 7D67 D4A6</text>
+<text x="102" y="398" opacity="0.2">61FB 599A 6E15</text>
+<text x="102" y="409" opacity="0.55">E947 AFD6 08C9</text>
+<text x="102" y="420" opacity="0.14">497B 628E 96DD</text>
+<text x="102" y="431" opacity="0.14">3A30 4E27 EB9F</text>
+<text x="102" y="442" opacity="0.4">3251 22BD E2C8</text>
+<text x="102" y="453" opacity="0.4">88F3 B9DD 8A31</text>
+<text x="102" y="464" opacity="0.28">4EE0 DE05</text>
+<text x="102" y="475" opacity="0.55">7A8B 7FDA</text>
+<text x="102" y="486" opacity="0.28">5901 DF88 E7C8</text>
+<text x="102" y="497" opacity="0.28">D26A 768D</text>
+<text x="174" y="24" opacity="0.55">37C1 F03C 0BE5</text>
+<text x="174" y="35" opacity="0.14">90DF D1FD</text>
+<text x="174" y="46" opacity="0.4">9770 D4BB</text>
+<text x="174" y="57" opacity="0.4">911E 0977 3270</text>
+<text x="174" y="68" opacity="0.14">FD0C 8D59</text>
+<text x="174" y="79" opacity="0.28">2623 52E5</text>
+<text x="174" y="90" opacity="0.2">CCA0 11D2 B975</text>
+<text x="174" y="101" opacity="0.2">C2F6 C2F4 4B73</text>
+<text x="174" y="112" opacity="0.55">911F D259 AEC5</text>
+<text x="174" y="123" opacity="0.14">E735 4E78</text>
+<text x="174" y="134" opacity="0.55">42A7 E799 FDD6</text>
+<text x="174" y="145" opacity="0.55">B07C F807</text>
+<text x="174" y="156" opacity="0.55">3BEC 675E</text>
+<text x="174" y="167" opacity="0.28">C5DB 90C2 58B7</text>
+<text x="174" y="178" opacity="0.55">F8D9 6C04</text>
+<text x="174" y="189" opacity="0.2">5441 F0BB 9D9C</text>
+<text x="174" y="200" opacity="0.2">09E5 FDBC</text>
+<text x="174" y="211" opacity="0.14">4382 5E2C</text>
+<text x="174" y="222" opacity="0.28">BE91 B82B</text>
+<text x="174" y="233" opacity="0.14">BFB6 65A0</text>
+<text x="174" y="244" opacity="0.2">67B2 A6B1 B7AF</text>
+<text x="174" y="255" opacity="0.4">9F73 07D8 32A3</text>
+<text x="174" y="266" opacity="0.2">6816 B808 440A</text>
+<text x="174" y="277" opacity="0.2">F00B EDC0</text>
+<text x="174" y="288" opacity="0.14">762E F613 039D</text>
+<text x="174" y="299" opacity="0.28">D4B2 2CF6 05F2</text>
+<text x="174" y="310" opacity="0.28">D072 5815 225E</text>
+<text x="174" y="321" opacity="0.55">4E79 3BB9</text>
+<text x="174" y="332" opacity="0.4">4E09 1F61 2DCD</text>
+<text x="174" y="343" opacity="0.2">1D53 75D4 5C62</text>
+<text x="174" y="354" opacity="0.4">D0E9 408E</text>
+<text x="174" y="365" opacity="0.55">0431 7077</text>
+<text x="174" y="376" opacity="0.14">1A14 30B7</text>
+<text x="174" y="387" opacity="0.2">456F 1975 EFF3</text>
+<text x="174" y="398" opacity="0.28">707E 2F0E C909</text>
+<text x="174" y="409" opacity="0.2">ADFF 3A3E D1C5</text>
+<text x="174" y="420" opacity="0.14">1C44 15BC FDC3</text>
+<text x="174" y="431" opacity="0.55">5E13 8CD2</text>
+<text x="174" y="442" opacity="0.28">0C58 4ED5</text>
+<text x="174" y="453" opacity="0.2">5616 8F9A 5178</text>
+<text x="174" y="464" opacity="0.28">36C9 FB92</text>
+<text x="174" y="475" opacity="0.55">A9C9 756B 2D90</text>
+<text x="174" y="486" opacity="0.28">54A1 0F13</text>
+<text x="174" y="497" opacity="0.2">3005 7E51</text>
+<text x="246" y="24" opacity="0.55">F77B C233</text>
+<text x="246" y="35" opacity="0.2">9F6C 6155</text>
+<text x="246" y="46" opacity="0.2">CFA2 195E</text>
+<text x="246" y="57" opacity="0.4">2BC9 1A03</text>
+<text x="246" y="68" opacity="0.28">74B3 1872</text>
+<text x="246" y="79" opacity="0.14">7C91 1E49</text>
+<text x="246" y="90" opacity="0.28">28B6 C9BB 775D</text>
+<text x="246" y="101" opacity="0.14">34F9 BD32 5C38</text>
+<text x="246" y="112" opacity="0.28">160C 6DE4</text>
+<text x="246" y="123" opacity="0.28">08F4 6014</text>
+<text x="246" y="134" opacity="0.14">385C 5630 93F5</text>
+<text x="246" y="145" opacity="0.4">2868 6116</text>
+<text x="246" y="156" opacity="0.4">1F8D E743 9CFF</text>
+<text x="246" y="167" opacity="0.28">A9DE ABFA</text>
+<text x="246" y="178" opacity="0.2">65FA 3C44 986D</text>
+<text x="246" y="189" opacity="0.28">E0B6 C871</text>
+<text x="246" y="200" opacity="0.2">5927 2BE3</text>
+<text x="246" y="211" opacity="0.28">D8B6 41AC B5F6</text>
+<text x="246" y="222" opacity="0.2">F7F9 46D8 8FDF</text>
+<text x="246" y="233" opacity="0.55">73E3 08A3 5585</text>
+<text x="246" y="244" opacity="0.14">0681 AEBD</text>
+<text x="246" y="255" opacity="0.14">9AC0 ADFC 3966</text>
+<text x="246" y="266" opacity="0.4">9A88 D28A 9621</text>
+<text x="246" y="277" opacity="0.2">E1C7 3A26 532B</text>
+<text x="246" y="288" opacity="0.14">6616 4FC3 D437</text>
+<text x="246" y="299" opacity="0.28">3302 F7CF 0B61</text>
+<text x="246" y="310" opacity="0.55">A69B E64B 3479</text>
+<text x="246" y="321" opacity="0.28">C0F4 D777 8CAA</text>
+<text x="246" y="332" opacity="0.2">1020 D80E</text>
+<text x="246" y="343" opacity="0.14">2D72 DFAE</text>
+<text x="246" y="354" opacity="0.4">EA72 12D5 0BC1</text>
+<text x="246" y="365" opacity="0.4">29D8 F5FD 987B</text>
+<text x="246" y="376" opacity="0.55">E90B DDF4</text>
+<text x="246" y="387" opacity="0.2">FEFA BCC9 52E5</text>
+<text x="246" y="398" opacity="0.55">C5D8 61D1</text>
+<text x="246" y="409" opacity="0.2">6AFC C8F8 7B10</text>
+<text x="246" y="420" opacity="0.4">C237 C52A</text>
+<text x="246" y="431" opacity="0.4">EB8D EEA7 CB33</text>
+<text x="246" y="442" opacity="0.2">0F52 D395 16E0</text>
+<text x="246" y="453" opacity="0.2">C0EE 2235</text>
+<text x="246" y="464" opacity="0.55">AB30 B166</text>
+<text x="246" y="475" opacity="0.28">BA57 675B</text>
+<text x="246" y="486" opacity="0.2">9CE4 E37A</text>
+<text x="246" y="497" opacity="0.14">9114 3A11 B5A1</text>
+<text x="318" y="24" opacity="0.14">7CEA 8A9E 8A64</text>
+<text x="318" y="35" opacity="0.28">074F 8435 4F98</text>
+<text x="318" y="46" opacity="0.2">D5A8 8EDF</text>
+<text x="318" y="57" opacity="0.14">ABE1 48E7 326F</text>
+<text x="318" y="68" opacity="0.55">8AF9 0569</text>
+<text x="318" y="79" opacity="0.4">B037 DB85 776C</text>
+<text x="318" y="90" opacity="0.14">8002 9DB8</text>
+<text x="318" y="101" opacity="0.2">D6C6 E452</text>
+<text x="318" y="112" opacity="0.2">7E80 7C29</text>
+<text x="318" y="123" opacity="0.14">EB0F 55F9 D9E9</text>
+<text x="318" y="134" opacity="0.4">D20A 4AC5</text>
+<text x="318" y="145" opacity="0.14">72A2 DEE3</text>
+<text x="318" y="156" opacity="0.55">7CF2 706F</text>
+<text x="318" y="167" opacity="0.14">960C 64AA</text>
+<text x="318" y="178" opacity="0.55">3E89 4B6D</text>
+<text x="318" y="189" opacity="0.4">7976 2942</text>
+<text x="318" y="200" opacity="0.4">5C2C 4EDB</text>
+<text x="318" y="211" opacity="0.2">9C18 2318</text>
+<text x="318" y="222" opacity="0.2">A719 688C 2ED3</text>
+<text x="318" y="233" opacity="0.55">0900 73D5 7989</text>
+<text x="318" y="244" opacity="0.55">B5AB 4334 FC6E</text>
+<text x="318" y="255" opacity="0.55">9022 EE06</text>
+<text x="318" y="266" opacity="0.2">02FB 66C1 DF35</text>
+<text x="318" y="277" opacity="0.28">1C1D 7B5B 7EC9</text>
+<text x="318" y="288" opacity="0.4">3091 B977</text>
+<text x="318" y="299" opacity="0.28">DEBF 9909</text>
+<text x="318" y="310" opacity="0.2">5323 6C8F</text>
+<text x="318" y="321" opacity="0.28">5057 5264 36C1</text>
+<text x="318" y="332" opacity="0.55">AE20 C3B9 0B51</text>
+<text x="318" y="343" opacity="0.4">3870 49C2</text>
+<text x="318" y="354" opacity="0.2">0BED 22A2</text>
+<text x="318" y="365" opacity="0.14">D563 1F47 7081</text>
+<text x="318" y="376" opacity="0.2">3F29 F3FB EA45</text>
+<text x="318" y="387" opacity="0.28">BE50 CCAE</text>
+<text x="318" y="398" opacity="0.14">2DC2 38A5</text>
+<text x="318" y="409" opacity="0.28">3F14 839E</text>
+<text x="318" y="420" opacity="0.55">740B 6D47</text>
+<text x="318" y="431" opacity="0.4">E891 E9D7</text>
+<text x="318" y="442" opacity="0.28">BA5B 365F A2E5</text>
+<text x="318" y="453" opacity="0.14">E746 DD8A</text>
+<text x="318" y="464" opacity="0.4">357A 47E6 5E4B</text>
+<text x="318" y="475" opacity="0.4">5D51 89F8 C858</text>
+<text x="318" y="486" opacity="0.14">3B64 AC1E 2180</text>
+<text x="318" y="497" opacity="0.55">C3F2 903A EF54</text>
+<text x="390" y="24" opacity="0.55">B307 24FB 3E56</text>
+<text x="390" y="35" opacity="0.2">EC31 F537</text>
+<text x="390" y="46" opacity="0.4">ED57 356B</text>
+<text x="390" y="57" opacity="0.28">ED4D DECB</text>
+<text x="390" y="68" opacity="0.4">2F32 E81E D6A1</text>
+<text x="390" y="79" opacity="0.4">4B36 2E6B</text>
+<text x="390" y="90" opacity="0.2">06A9 E39E F4C0</text>
+<text x="390" y="101" opacity="0.55">47C9 BE1E 79DE</text>
+<text x="390" y="112" opacity="0.14">D1EC D2F1 777C</text>
+<text x="390" y="123" opacity="0.55">2A2D 5A92</text>
+<text x="390" y="134" opacity="0.2">B1A8 38A5 DABB</text>
+<text x="390" y="145" opacity="0.2">74E3 98CB DD49</text>
+<text x="390" y="156" opacity="0.4">FAF2 6DFF 7F82</text>
+<text x="390" y="167" opacity="0.2">EEB4 5C35 2BF7</text>
+<text x="390" y="178" opacity="0.14">2264 4C4D F2D4</text>
+<text x="390" y="189" opacity="0.55">DDEC 7E44</text>
+<text x="390" y="200" opacity="0.14">B1A6 3B9B 1C51</text>
+<text x="390" y="211" opacity="0.2">7282 4E8F</text>
+<text x="390" y="222" opacity="0.14">8F19 CF91</text>
+<text x="390" y="233" opacity="0.4">F68D DC10</text>
+<text x="390" y="244" opacity="0.28">A574 DD3E</text>
+<text x="390" y="255" opacity="0.14">FA55 1993 AFFF</text>
+<text x="390" y="266" opacity="0.4">74AE 9EAF</text>
+<text x="390" y="277" opacity="0.2">E58A 6D21 2FCB</text>
+<text x="390" y="288" opacity="0.14">E4F4 6E1E</text>
+<text x="390" y="299" opacity="0.4">C216 365F</text>
+<text x="390" y="310" opacity="0.14">6783 7F9F 3A18</text>
+<text x="390" y="321" opacity="0.2">772F 6340 9D66</text>
+<text x="390" y="332" opacity="0.28">FF96 CC46 DEBC</text>
+<text x="390" y="343" opacity="0.14">5548 E18C</text>
+<text x="390" y="354" opacity="0.2">8419 980C</text>
+<text x="390" y="365" opacity="0.4">19F8 3015 16AD</text>
+<text x="390" y="376" opacity="0.4">BBA1 816B</text>
+<text x="390" y="387" opacity="0.55">D45E 9381 119E</text>
+<text x="390" y="398" opacity="0.4">C18D C4A4 7A6F</text>
+<text x="390" y="409" opacity="0.14">C78B CB11</text>
+<text x="390" y="420" opacity="0.4">DF76 7B5A 9BDD</text>
+<text x="390" y="431" opacity="0.28">402C 4137</text>
+<text x="390" y="442" opacity="0.4">5E21 6BAC</text>
+<text x="390" y="453" opacity="0.14">654F 7EE0</text>
+<text x="390" y="464" opacity="0.55">701C 6332 6B7F</text>
+<text x="390" y="475" opacity="0.14">21DA F336</text>
+<text x="390" y="486" opacity="0.4">A1B8 0398 33E8</text>
+<text x="390" y="497" opacity="0.55">4EF2 1670</text>
+<rect x="60" y="150" width="268" height="20" fill="#d3ecec" opacity=".88"/>
+<text x="70" y="163.5" font-size="10" fill="#041416" opacity="1" letter-spacing="1.5">H-01 MARISOL</text>
+<text x="292" y="163.5" font-size="8" fill="#041416" opacity="1" text-anchor="end">ONLINE</text>
+<rect x="60" y="184" width="268" height="20" fill="#d3ecec" opacity=".88"/>
+<text x="70" y="197.5" font-size="10" fill="#041416" opacity="1" letter-spacing="1.5">H-02 MARCOS</text>
+<text x="292" y="197.5" font-size="8" fill="#041416" opacity="1" text-anchor="end">ONLINE</text>
+<rect x="60" y="218" width="268" height="20" fill="#d3ecec" opacity=".88"/>
+<text x="70" y="231.5" font-size="10" fill="#041416" opacity="1" letter-spacing="1.5">H-03 ANAHI</text>
+<text x="292" y="231.5" font-size="8" fill="#041416" opacity="1" text-anchor="end">ONLINE</text>
+<rect x="60" y="252" width="268" height="20" fill="#d3ecec" opacity=".88"/>
+<text x="70" y="265.5" font-size="10" fill="#041416" opacity="1" letter-spacing="1.5">H-04 EZEQUIEL</text>
+<text x="292" y="265.5" font-size="8" fill="#041416" opacity="1" text-anchor="end">ONLINE</text>
+<rect x="60" y="286" width="268" height="20" fill="#d3ecec" opacity=".88"/>
+<text x="70" y="299.5" font-size="10" fill="#041416" opacity="1" letter-spacing="1.5">H-05 NANCY</text>
+<text x="292" y="299.5" font-size="8" fill="#041416" opacity="1" text-anchor="end">ONLINE</text>
+</g>
+<g fill="none" stroke="#9fd0d2" stroke-width="1" opacity=".9"><rect x="470" y="48" width="150" height="48"/><path d="M470 62h150" opacity=".5"/></g>
+<g font-family="Courier New, monospace" fill="#cfe9ea"><text x="480" y="59" font-size="8" letter-spacing="2" opacity=".8">GRUPO_17 // TP2</text><text x="480" y="82" font-size="15" letter-spacing="2">09/10/2026</text></g>
+<g stroke="#9fd0d2" fill="none"><path d="M650 72H870" stroke-width="1"/><path d="M650 72H870" stroke-width="9" stroke-dasharray="1 11" opacity=".55"/></g>
+<g fill="none" filter="url(#glow)"><circle cx="660" cy="300" r="118" stroke="#78c8ca" stroke-width="2.6"/><circle cx="660" cy="300" r="104" stroke="#cfe9ea" stroke-width=".9" opacity=".85"/><circle cx="660" cy="300" r="136" stroke="#9fd0d2" stroke-width="3" stroke-dasharray="2 7" opacity=".55"/><path d="M660 182a118 118 0 0 1 102 59" stroke="#e9f7f7" stroke-width="3.2" stroke-linecap="round"/></g>
+<g font-family="Courier New, monospace" fill="#cfe9ea" font-size="9" letter-spacing="2" text-anchor="middle"><text x="660" y="296" font-size="22" letter-spacing="4">REACT</text><text x="660" y="316" opacity=".7">NÚCLEO · ONLINE</text></g>
+<g stroke="#9fd0d2" opacity=".7"><path d="M360 470H880" stroke-width="1"/><path d="M360 470H880" stroke-width="7" stroke-dasharray="1 9" opacity=".6"/></g>
+</svg>

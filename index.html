@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Los Héroes del Código · Grupo 17 · Aplicación React con portada, perfiles, recursos, API pública, árbol de componentes y bitácora." />
+    <title>Los Héroes del Código · Grupo 17</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@600;700;900&family=Share+Tech+Mono&family=UnifrakturCook:wght@700&family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <script>
+      try {
+        var t = localStorage.getItem('tema');
+        if (t !== 'diario' && t !== 'futurista') {
+          t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'futurista' : 'diario';
+        }
+        document.documentElement.dataset.tema = t;
+      } catch (e) { document.documentElement.dataset.tema = 'diario'; }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

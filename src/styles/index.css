@@ -1,0 +1,384 @@
+/* =====================================================================
+   Los Héroes del Código · TP2
+   ===================================================================== */
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; min-height: 100vh; font-family: var(--fuente-cuerpo); font-size: 1.05rem; line-height: 1.6; color: var(--tinta); background: var(--fondo); background-attachment: fixed; }
+body.sin-scroll { overflow: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3, h4 { margin: 0; font-family: var(--fuente-titulo); line-height: 1.12; }
+p { margin: 0 0 .9em; }
+a { color: inherit; }
+code { font-family: 'Share Tech Mono', 'Courier New', monospace; font-size: .92em; }
+:focus-visible { outline: 2px solid var(--foco); outline-offset: 3px; }
+::selection { background: var(--tinta); color: var(--papel); }
+.icono { width: 1.05em; height: 1.05em; flex: none; }
+
+/* ---------- Edición DIARIO ---------- */
+[data-tema='diario'] {
+  color-scheme: light;
+  --fuente-titulo: 'Old Standard TT', 'Times New Roman', serif;
+  --fuente-marca: 'UnifrakturCook', 'Old Standard TT', serif;
+  --fuente-cuerpo: 'Vollkorn', Georgia, serif;
+  --fuente-datos: 'Vollkorn', Georgia, serif;
+  --tinta: #1f1a12; --tinta-suave: #4a4234;
+  --papel: #e6dcc2; --papel-2: rgba(250, 243, 222, .38);
+  --linea: #1f1a12; --linea-suave: rgba(31, 26, 18, .32);
+  --acento: #9c1c1c; --acento-2: #9c1c1c; --foco: #9c1c1c;
+  --hover-bg: #9c1c1c; --hover-tx: #fff;
+  --sidebar-bg: #d9cfb3;
+  --mayus: uppercase;
+  --fondo:
+    radial-gradient(circle at 12% 16%, rgba(150,105,45,.20) 0, transparent 9%),
+    radial-gradient(circle at 88% 70%, rgba(150,105,45,.16) 0, transparent 13%),
+    radial-gradient(circle at 66% 8%, rgba(120,85,35,.12) 0, transparent 7%),
+    radial-gradient(ellipse at center, transparent 50%, rgba(90,58,18,.42) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .30 0 0 0 0 .21 0 0 0 0 .10 1.4 0 0 0 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"),
+    #e2d8bd;
+}
+
+/* ---------- Edición FUTURISTA ---------- */
+[data-tema='futurista'] {
+  color-scheme: dark;
+  --fuente-titulo: 'Playfair Display', Georgia, serif;
+  --fuente-marca: 'Share Tech Mono', ui-monospace, monospace;
+  --fuente-cuerpo: 'Barlow', system-ui, sans-serif;
+  --fuente-datos: 'Share Tech Mono', ui-monospace, monospace;
+  --tinta: #eef2f3; --tinta-suave: #a3b0b4;
+  --papel: #000; --papel-2: rgba(255, 255, 255, .035);
+  --linea: rgba(255, 255, 255, .30); --linea-suave: rgba(255, 255, 255, .13);
+  --acento: #8fd0cf; --acento-2: #e0457b; --foco: #8fd0cf;
+  --hover-bg: #f2f6f6; --hover-tx: #000;
+  --sidebar-bg: #020405;
+  --mayus: none;
+  --fondo: radial-gradient(ellipse 70% 38% at 62% 0, rgba(110, 175, 180, .11), transparent 70%), #000;
+}
+[data-tema='futurista'] ::selection { background: var(--acento-2); color: #fff; }
+
+/* ---------- Estructura general ---------- */
+.app { display: grid; grid-template-columns: 280px minmax(0, 1fr); min-height: 100vh; }
+.contenido { width: 100%; max-width: 1180px; margin-inline: auto; padding: clamp(20px, 3.4vw, 52px); outline: none; min-width: 0; }
+[data-tema='diario'] .contenido {
+  margin-block: 22px; width: calc(100% - 44px); background: rgba(238, 229, 205, .5);
+  box-shadow: 0 0 0 1px var(--linea-suave), 0 0 0 7px rgba(238,229,205,.42), 0 0 0 8px rgba(31,26,18,.22), 0 22px 55px rgba(70,45,10,.28);
+}
+.saltar { position: absolute; left: -999px; top: 8px; z-index: 100; padding: .6rem 1rem; background: var(--tinta); color: var(--papel); }
+.saltar:focus { left: 8px; }
+.topbar { display: none; }
+
+/* ---------- Sidebar ---------- */
+.sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; display: flex; flex-direction: column; gap: 22px; padding: 26px 20px 22px; background: var(--sidebar-bg); border-right: 1px solid var(--linea); z-index: 20; }
+[data-tema='diario'] .sidebar { border-right: 4px double var(--tinta); }
+.sb-cerrar, .sb-fondo { display: none; }
+.sb-marca { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.sb-marca strong { display: block; font-family: var(--fuente-marca); font-weight: 700; font-size: 1.45rem; line-height: 1.05; }
+[data-tema='futurista'] .sb-marca strong { font-weight: 400; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; color: var(--acento); }
+[data-tema='futurista'] .sb-marca strong::before { content: '// '; color: var(--acento-2); }
+.sb-marca small { display: block; margin-top: 3px; font-family: var(--fuente-datos); font-size: .74rem; color: var(--tinta-suave); letter-spacing: .04em; }
+.sb-marca img { border-radius: 8px; }
+.sb-lista, .sb-sublista { list-style: none; margin: 0; padding: 0; }
+.sb-lista > li { margin-bottom: 4px; }
+.sb-titulo { display: block; padding: 10px 10px 4px; font-family: var(--fuente-datos); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--tinta-suave); }
+.sb-sublista { margin-left: 8px; }
+.sidebar nav a { display: block; padding: 8px 12px; text-decoration: none; border-left: 3px solid transparent; font-family: var(--fuente-datos); font-size: .95rem; }
+[data-tema='futurista'] .sidebar nav a { font-size: .86rem; letter-spacing: .08em; }
+.sidebar nav a:hover { background: var(--papel-2); border-left-color: var(--linea); }
+.sidebar nav a.active { border-left-color: var(--acento); font-weight: 700; background: var(--papel-2); }
+[data-tema='diario'] .sidebar nav a.active { background: var(--tinta); color: #e6dcc2; border-left-color: var(--acento); }
+[data-tema='futurista'] .sidebar nav a.active { color: var(--acento); background: rgba(143, 208, 207, .08); }
+.sb-pie { margin-top: auto; }
+
+/* ---------- Botones ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .6rem 1.1rem; border: 1px solid var(--linea); background: transparent; color: var(--tinta); font-family: var(--fuente-datos); font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.btn:hover:not(:disabled) { background: var(--hover-bg); color: var(--hover-tx); border-color: var(--hover-bg); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn-fuerte { background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
+[data-tema='diario'] .btn-fuerte { color: #e6dcc2; }
+.btn-chico { padding: .35rem .75rem; font-size: .74rem; margin: .2rem .4rem .2rem 0; }
+.btn-tema { width: 100%; justify-content: flex-start; font-size: .78rem; }
+.btn-texto { background: none; border: 0; padding: .2rem .1rem; color: var(--acento); font: inherit; font-family: var(--fuente-datos); font-size: .85rem; text-decoration: underline; cursor: pointer; }
+[data-tema='futurista'] .btn-texto { color: var(--acento); }
+.enlace-ext { display: inline-block; margin-top: .4rem; font-family: var(--fuente-datos); font-size: .85rem; color: var(--acento); }
+[data-tema='diario'] .enlace-ext { color: var(--tinta); font-weight: 600; }
+
+/* ---------- Texto común ---------- */
+.etiqueta { margin: 0 0 .6rem; font-family: var(--fuente-datos); font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--tinta-suave); }
+[data-tema='diario'] .etiqueta { font-style: italic; text-transform: none; letter-spacing: .04em; font-size: .92rem; }
+[data-tema='futurista'] .etiqueta::before { content: '// '; color: var(--acento-2); }
+.bajada { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--tinta-suave); }
+[data-tema='diario'] .bajada { font-style: italic; color: var(--tinta); }
+[data-tema='futurista'] .hero .bajada, [data-tema='futurista'] .perfil-enc .bajada { font-family: var(--fuente-datos); font-size: clamp(.82rem, 1.8vw, 1rem); letter-spacing: .12em; color: var(--acento); }
+[data-tema='futurista'] .hero .bajada::before, [data-tema='futurista'] .perfil-enc .bajada::before { content: '> '; color: var(--acento-2); }
+
+h1 { font-size: clamp(2.1rem, 6.4vw, 4.2rem); font-weight: 700; text-transform: var(--mayus); letter-spacing: .01em; overflow-wrap: anywhere; }
+h2 { font-size: clamp(1.4rem, 3.4vw, 2rem); font-weight: 700; margin-bottom: .6em; overflow-wrap: anywhere; }
+h3 { font-size: 1.2rem; }
+[data-tema='diario'] h2 { text-transform: uppercase; letter-spacing: .1em; padding: 8px 0; border-top: 4px double var(--tinta); border-bottom: 1px solid var(--tinta); }
+[data-tema='futurista'] h2 { font-weight: 600; display: flex; align-items: center; gap: 16px; }
+[data-tema='futurista'] h2::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--linea), transparent); }
+[data-tema='diario'] h1[data-text] { padding: 12px 0 10px; border-top: 5px double var(--tinta); border-bottom: 1px solid var(--tinta); }
+
+.pagina-enc { margin-bottom: clamp(20px, 3vw, 36px); max-width: 860px; }
+.pagina-enc h1 { margin-bottom: .35em; }
+.pagina-enc .bajada { text-transform: none; }
+.bloque { margin-top: clamp(44px, 7vw, 92px); }
+.bloque > h2, .bloque-chico > h2 { margin-bottom: .8em; }
+.bloque-chico { margin-top: 30px; }
+.bloque-chico > h2 { font-size: 1.3rem; }
+[data-tema='diario'] .bloque-chico > h2 { border-top-width: 1px; border-top-style: solid; border-bottom: 3px double var(--tinta); letter-spacing: .08em; }
+
+/* ---------- Franja de edición ---------- */
+.franja { display: flex; justify-content: space-between; gap: 12px; margin-bottom: clamp(22px, 4vw, 44px); padding: 8px 0; border-bottom: 1px solid var(--linea); font-family: var(--fuente-datos); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; color: var(--tinta-suave); }
+[data-tema='diario'] .franja { font-style: italic; text-transform: none; letter-spacing: .04em; font-size: .85rem; color: var(--tinta); border-bottom: 3px double var(--tinta); }
+[data-tema='futurista'] .franja { border-bottom-style: dashed; }
+[data-tema='futurista'] .franja-centro { color: var(--acento); }
+
+/* ---------- Portada ---------- */
+.hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(20px, 4vw, 56px); align-items: center; }
+.hero h1 { margin-bottom: .3em; }
+.hero-parrafos { margin: 1.4rem 0; max-width: 60ch; }
+.hero-parrafos p:first-child::first-letter { }
+[data-tema='diario'] .hero-parrafos p:first-child::first-letter { float: left; font-family: var(--fuente-titulo); font-weight: 700; font-size: 3.6rem; line-height: .82; padding: 5px 8px 0 0; }
+[data-tema='futurista'] .hero-parrafos p { padding-left: 14px; border-left: 1px solid var(--acento); color: #cfd8da; }
+.hero-acciones { display: flex; flex-wrap: wrap; gap: 12px; }
+.ilus { width: 100%; height: auto; }
+[data-tema='diario'] .ilus-futuro, [data-tema='futurista'] .ilus-diario { display: none; }
+[data-tema='diario'] .ilus-diario { mix-blend-mode: multiply; }
+.presentacion { max-width: 760px; }
+
+/* ---------- Revelador (cortina diario ↔ holograma) ---------- */
+.revela { margin: 0; }
+.revela-escena { position: relative; width: 100%; max-width: 640px; aspect-ratio: 4 / 3; margin-inline: auto; overflow: hidden; border: 1px solid var(--linea); user-select: none; -webkit-user-select: none; touch-action: pan-y; background: #000; }
+.revela-escena:focus-within { outline: 2px solid var(--foco); outline-offset: 4px; }
+.revela-capa { position: absolute; inset: 0; }
+.revela-capa img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+.revela-futuro { background: #02080a; }
+.revela-futuro img { filter: grayscale(1) contrast(1.12) brightness(.95) sepia(.5) hue-rotate(138deg) saturate(1.25); }
+.revela-futuro::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0,18,20,.35) 3px 4px), radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%); }
+.revela-diario { background: #e2d8bd; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.revela-diario img { filter: grayscale(1) sepia(.35) contrast(1.18); mix-blend-mode: multiply; }
+.revela-diario::after { content: ''; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply; background: radial-gradient(circle at 1px 1px, rgba(31,26,18,.38) 1px, transparent 1.5px) 0 0 / 4px 4px, radial-gradient(ellipse at center, transparent 50%, rgba(90,58,18,.4) 100%); }
+.revela-tag { position: absolute; top: 12px; z-index: 2; padding: 1px 8px; font-family: var(--fuente-datos); font-size: .72rem; letter-spacing: .06em; }
+.revela-futuro .revela-tag { right: 12px; background: rgba(0,0,0,.75); color: #cfeaea; font-family: 'Share Tech Mono', monospace; }
+.revela-diario .revela-tag { left: 12px; background: #e6dcc2; color: #1f1a12; font-style: italic; font-family: 'Vollkorn', Georgia, serif; }
+.revela-linea { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; z-index: 3; transform: translateX(-50%); background: #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.35); pointer-events: none; }
+.revela-linea i { position: absolute; top: 50%; left: 50%; width: 38px; height: 38px; transform: translate(-50%, -50%); border-radius: 50%; background: #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.4); }
+.revela-linea i::before { content: '◂ ▸'; position: absolute; inset: 0; display: grid; place-items: center; font-size: .72rem; letter-spacing: 2px; color: #111; font-style: normal; }
+.revela-input { position: absolute; inset: 0; z-index: 4; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; }
+.revela-rotulo { position: absolute; bottom: 12px; z-index: 2; padding: 2px 10px; font-family: 'Share Tech Mono', monospace; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; background: rgba(0,0,0,.72); color: #fff; pointer-events: none; }
+.revela-rotulo.izq { left: 12px; } .revela-rotulo.der { right: 12px; }
+.revela figcaption { max-width: 640px; margin: 16px auto 0; text-align: center; }
+.revela-fichas { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.ficha { padding: .4rem .9rem; border: 1px solid var(--linea); background: transparent; color: var(--tinta); font-family: var(--fuente-datos); font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; transition: background .2s, color .2s; }
+.ficha:hover { background: var(--papel-2); }
+.ficha[aria-pressed='true'] { background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
+[data-tema='diario'] .ficha[aria-pressed='true'] { color: #e6dcc2; }
+
+/* ---------- Grillas y tarjetas ---------- */
+.grilla { display: grid; gap: clamp(14px, 2.2vw, 26px); }
+.grilla-5 { grid-template-columns: repeat(auto-fit, minmax(158px, 1fr)); }
+.grilla-4 { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.grilla-3 { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.grilla-pelis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grilla-2 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 430px), 1fr)); }
+.tarjeta { position: relative; display: block; padding: 14px; border: 1px solid var(--linea); background: var(--papel-2); color: inherit; text-decoration: none; transition: transform .2s, border-color .2s; }
+a.tarjeta:hover { transform: translateY(-3px); border-color: var(--tinta); }
+[data-tema='diario'] .tarjeta { outline: 1px solid var(--linea); outline-offset: -5px; padding: 16px; }
+[data-tema='futurista'] .tarjeta, [data-tema='futurista'] .foto-marco {
+  border-color: var(--linea-suave);
+  background-image: linear-gradient(var(--acento), var(--acento)), linear-gradient(var(--acento), var(--acento)), linear-gradient(var(--acento), var(--acento)), linear-gradient(var(--acento), var(--acento)), linear-gradient(var(--acento), var(--acento)), linear-gradient(var(--acento), var(--acento)), linear-gradient(var(--acento), var(--acento)), linear-gradient(var(--acento), var(--acento));
+  background-size: 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px;
+  background-position: left top, left top, right top, right top, left bottom, left bottom, right bottom, right bottom;
+  background-repeat: no-repeat;
+}
+.tarjeta h3, .tarjeta h4 { margin: .7rem 0 .2rem; }
+.tarjeta p { color: var(--tinta-suave); font-size: .95rem; margin-bottom: .5rem; }
+.tarjeta-cta { font-family: var(--fuente-datos); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--acento); }
+[data-tema='diario'] .tarjeta-cta { color: var(--tinta); font-weight: 700; }
+
+.tarjeta-integrante img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.tarjeta-integrante h3 { text-transform: var(--mayus); letter-spacing: .06em; }
+[data-tema='futurista'] .tarjeta-integrante h3 { text-transform: none; }
+.tarjeta-tag { position: absolute; top: 22px; left: 22px; z-index: 1; padding: 0 7px; font-family: var(--fuente-datos); font-size: .7rem; background: var(--papel); color: var(--tinta); }
+[data-tema='futurista'] .tarjeta-tag { background: rgba(0,0,0,.75); color: var(--acento); }
+.tarjeta-tag::before { content: 'Fig. '; font-style: italic; }
+[data-tema='futurista'] .tarjeta-tag::before { content: 'ID_'; font-style: normal; }
+[data-tema='diario'] .tarjeta-integrante img, [data-tema='diario'] .tarjeta-peli img { filter: grayscale(1) sepia(.32) contrast(1.12); mix-blend-mode: multiply; transition: filter .3s; }
+[data-tema='futurista'] .tarjeta-integrante img, [data-tema='futurista'] .tarjeta-peli img { filter: grayscale(1) contrast(1.08) brightness(.92); transition: filter .3s; }
+.tarjeta-integrante:hover img, .tarjeta-peli:hover img { filter: grayscale(.05) sepia(.12); }
+.tarjeta-enlace h3 { font-size: 1.45rem; }
+
+/* ---------- Perfil ---------- */
+.perfil-enc { margin-bottom: clamp(18px, 3vw, 32px); }
+.perfil-enc h1 { margin-bottom: .3em; }
+.perfil-grilla { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(20px, 4vw, 56px); align-items: start; }
+.perfil-lateral { position: sticky; top: 24px; }
+.foto-marco { margin: 0; padding: 12px; border: 1px solid var(--linea); background: var(--papel-2); }
+[data-tema='diario'] .foto-marco { background: #f1e9d1; }
+.foto-marco img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+[data-tema='diario'] .foto-marco img:not(.foto-bn) { filter: sepia(.5) saturate(.78) contrast(1.05); mix-blend-mode: multiply; }
+.foto-marco img.foto-bn { filter: grayscale(1); }
+.foto-btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
+.foto-marco figcaption { margin-top: 10px; font-family: var(--fuente-datos); font-size: .78rem; font-style: italic; color: var(--tinta-suave); text-align: center; }
+[data-tema='futurista'] .foto-marco figcaption { font-style: normal; letter-spacing: .06em; }
+.ficha-datos { padding: 16px 18px; border: 1px solid var(--linea); background: var(--papel-2); }
+.ficha-datos p { margin-bottom: .3rem; }
+.perfil-enlaces { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--linea); }
+.etiquetas { display: flex; flex-wrap: wrap; gap: 8px; }
+.etiqueta-hab { padding: .3rem .8rem; border: 1px solid var(--linea); background: transparent; color: var(--tinta); font-family: var(--fuente-datos); font-size: .9rem; }
+[data-tema='diario'] .etiqueta-hab { background: var(--papel-2); }
+.etiqueta-hab.interactiva { cursor: pointer; transition: background .2s, color .2s; }
+.etiqueta-hab.interactiva:hover { background: var(--papel-2); border-color: var(--tinta); }
+.etiqueta-hab[aria-pressed='true'] { background: var(--tinta); color: var(--papel); }
+[data-tema='diario'] .etiqueta-hab[aria-pressed='true'] { color: #e6dcc2; }
+.desc-habilidad { min-height: 1.6em; margin-top: 12px; font-style: italic; color: var(--tinta-suave); }
+.tarjeta-peli img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; }
+.tarjeta-peli h4 { font-size: 1.05rem; }
+.peli-dir { font-size: .85rem !important; }
+.sinopsis { margin-top: .4rem; padding: .6rem .8rem; border-left: 3px solid var(--acento); background: var(--papel-2); font-size: .9rem !important; }
+.sinopsis[hidden] { display: none; }
+.lista-compacta { margin: 0; padding-left: 1.2rem; }
+.lista-compacta li { margin-bottom: .55rem; }
+.btn-dato { padding: 0; border: 0; background: none; color: var(--acento); font: inherit; font-size: .8rem; text-decoration: underline; cursor: pointer; }
+[data-tema='diario'] .btn-dato { color: var(--acento); }
+.dato { display: block; margin-top: 2px; font-size: .88rem; color: var(--tinta-suave); }
+.cita { margin-top: 34px; padding: 22px 24px; border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); text-align: center; }
+[data-tema='diario'] .cita { border-top: 4px double var(--tinta); border-bottom: 4px double var(--tinta); }
+.cita h3 { font-size: .8rem; font-family: var(--fuente-datos); letter-spacing: .2em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: .8rem; }
+.cita blockquote { margin: 0 0 16px; font-family: var(--fuente-titulo); font-size: clamp(1.15rem, 2.6vw, 1.55rem); font-style: italic; line-height: 1.35; min-height: 2.8em; }
+.nav-perfil { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 38px; }
+
+/* ---------- Controles, estados ---------- */
+.controles { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px; margin: 26px 0 12px; }
+.controles-fila { justify-content: space-between; align-items: center; }
+.campo { display: flex; flex-direction: column; gap: 5px; font-family: var(--fuente-datos); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-suave); }
+.campo-grande { flex: 1 1 260px; }
+.campo input, .campo select { min-height: 44px; padding: .55rem .8rem; border: 1px solid var(--linea); background: var(--papel-2); color: var(--tinta); font: inherit; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+[data-tema='futurista'] .campo input, [data-tema='futurista'] .campo select { background: #070b0c; }
+.campo input::placeholder { color: var(--tinta-suave); opacity: .8; }
+.resumen-lista { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin: 18px 0 14px; color: var(--tinta-suave); font-size: .95rem; }
+.resumen-lista p { margin: 0; }
+.acciones-mini { display: flex; gap: 14px; }
+.arbol-acciones { margin: 6px 0 20px; }
+.estado { margin-top: 22px; padding: 32px 22px; border: 1px dashed var(--linea); text-align: center; }
+.estado p { margin-bottom: .5rem; }
+.estado .btn { margin-top: .6rem; }
+.estado-error { border-color: var(--acento-2); border-style: solid; }
+.estado-404 { max-width: 640px; margin-inline: auto; }
+.spinner { display: inline-block; width: 34px; height: 34px; margin-bottom: 10px; border: 3px solid var(--linea-suave); border-top-color: var(--tinta); border-radius: 50%; animation: girar .9s linear infinite; }
+
+/* ---------- Recursos y API ---------- */
+.tarjeta-recurso h3 { margin: .7rem 0 .4rem; font-size: 1.2rem; }
+.recurso-etiquetas { display: flex; flex-wrap: wrap; gap: 6px; }
+.insignia { display: inline-block; padding: .08rem .55rem; border: 1px solid var(--linea); font-family: var(--fuente-datos); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--tinta); white-space: nowrap; }
+.insignia.suave { border-color: var(--linea-suave); color: var(--tinta-suave); }
+.recurso-detalle { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--linea); }
+.recurso-detalle[hidden] { display: none; }
+.recurso-detalle h4 { font-family: var(--fuente-datos); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--tinta-suave); margin: 0 0 .3rem; }
+.tarjeta-serie { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 14px; }
+.tarjeta-serie img, .serie-sin-imagen { width: 110px; aspect-ratio: 2 / 3; object-fit: cover; }
+.serie-sin-imagen { display: grid; place-items: center; border: 1px dashed var(--linea); font-size: .75rem; color: var(--tinta-suave); }
+.tarjeta-serie h3 { margin-top: 0; font-size: 1.2rem; }
+.serie-meta, .serie-generos { margin-bottom: .3rem !important; font-family: var(--fuente-datos); font-size: .8rem !important; letter-spacing: .04em; }
+
+/* ---------- Árbol ---------- */
+.arbol-lista { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 1px dashed var(--linea); }
+.arbol-raiz { padding-left: 0; border: 0; }
+.nodo { margin: 0; padding-top: 6px; }
+.nodo-fila { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.nodo-btn, .nodo-hoja { display: inline-grid; place-items: center; width: 26px; height: 26px; flex: none; }
+.nodo-btn { border: 1px solid var(--linea); background: transparent; color: var(--tinta); cursor: pointer; font-size: .9rem; }
+.nodo-btn:hover { background: var(--papel-2); }
+.nodo-hoja { color: var(--tinta-suave); }
+.nodo-nombre { font-weight: 700; font-size: 1.02rem; overflow-wrap: anywhere; }
+[data-tema='futurista'] .nodo-nombre { color: var(--acento); }
+.nodo-archivo { font-family: 'Share Tech Mono', 'Courier New', monospace; font-size: .76rem; color: var(--tinta-suave); overflow-wrap: anywhere; min-width: 0; }
+.nodo-nota { margin: .1rem 0 .4rem 36px; font-size: .92rem; color: var(--tinta-suave); }
+
+/* ---------- Bitácora ---------- */
+.linea-tiempo { display: grid; gap: 12px; }
+.entrada { border: 1px solid var(--linea); background: var(--papel-2); }
+.entrada.abierta { border-color: var(--tinta); }
+.entrada h3 { font-size: 1rem; }
+.entrada-btn { display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 6px 16px; width: 100%; padding: 14px 16px; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.entrada-btn:hover { background: var(--papel-2); }
+.entrada-fecha { font-family: var(--fuente-datos); font-size: .8rem; letter-spacing: .12em; color: var(--acento); }
+[data-tema='diario'] .entrada-fecha { color: var(--tinta-suave); font-weight: 600; }
+.entrada-titulo { font-family: var(--fuente-titulo); font-size: 1.15rem; font-weight: 700; }
+.entrada-signo { font-family: var(--fuente-datos); font-size: 1.3rem; width: 1.2em; text-align: center; }
+.entrada-texto { padding: 0 16px 18px; }
+.entrada-texto[hidden] { display: none; }
+.entrada-texto p { margin: 0; max-width: 72ch; }
+
+/* ---------- Efectos de la edición Futurista ---------- */
+/* Efecto glitch SIEMPRE visible en los títulos con data-text (el de la portada y el nombre de cada perfil):
+   dos copias del texto —magenta y teal— corridas apenas hacia los costados, detrás del texto blanco.
+   Para cambiarlo:  --glitch-desfase = cuánto se separan  ·  opacity = qué tan fuerte se ven */
+[data-tema='futurista'] h1[data-text] { --glitch-desfase: .035em; position: relative; isolation: isolate; }
+[data-tema='futurista'] h1[data-text]::before, [data-tema='futurista'] h1[data-text]::after { content: attr(data-text); position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .7; }
+[data-tema='futurista'] h1[data-text]::before { color: var(--acento-2); transform: translate(calc(var(--glitch-desfase) * -1), 0); }
+[data-tema='futurista'] h1[data-text]::after { color: var(--acento); transform: translate(var(--glitch-desfase), 0); }
+
+/* ---------- Animaciones (se desactivan con prefers-reduced-motion) ---------- */
+@keyframes girar { to { transform: rotate(360deg); } }
+/* Ráfaga: empieza en 0% (apenas carga la página) y dura ~0,5 s de cada ciclo de 4 s. Después las capas vuelven a su desfase de reposo. */
+@keyframes glitch-a { 0% { transform: translate(-.08em, 0); clip-path: inset(18% 0 52% 0); } 4% { transform: translate(.06em, 0); clip-path: inset(62% 0 10% 0); } 8% { transform: translate(-.07em, 0); clip-path: inset(34% 0 38% 0); } 12%, 100% { transform: translate(calc(var(--glitch-desfase) * -1), 0); clip-path: inset(0); } }
+@keyframes glitch-b { 0% { transform: translate(.08em, 0); clip-path: inset(60% 0 14% 0); } 5% { transform: translate(-.06em, 0); clip-path: inset(12% 0 60% 0); } 9% { transform: translate(.07em, 0); clip-path: inset(40% 0 30% 0); } 13%, 100% { transform: translate(var(--glitch-desfase), 0); clip-path: inset(0); } }
+@media (prefers-reduced-motion: no-preference) {
+  [data-tema='futurista'] h1[data-text]::before { animation: glitch-a 4s steps(1) infinite; }
+  [data-tema='futurista'] h1[data-text]::after { animation: glitch-b 4s steps(1) infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .spinner { animation-duration: 3s; }
+  * { transition-duration: .01ms !important; }
+}
+
+/* ---------- Responsive: 1200 / 900 / 600 / 400 ---------- */
+@media (min-width: 1200px) { .contenido { padding-inline: clamp(40px, 5vw, 72px); } }
+
+@media (max-width: 900px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; position: sticky; top: 0; z-index: 30; padding: 10px 16px; background: var(--sidebar-bg); border-bottom: 1px solid var(--linea); }
+  [data-tema='diario'] .topbar { border-bottom: 4px double var(--tinta); }
+  .tb-marca { font-family: var(--fuente-marca); font-size: 1.35rem; font-weight: 700; text-decoration: none; line-height: 1; }
+  [data-tema='futurista'] .tb-marca { font-size: .8rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: var(--acento); }
+  .tb-menu { padding: .45rem .9rem; }
+  .sidebar { position: fixed; inset: 0 auto 0 0; width: min(86vw, 320px); height: 100%; transform: translateX(-102%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; z-index: 50; box-shadow: 8px 0 30px rgba(0,0,0,.35); }
+  .sidebar.abierta { transform: none; visibility: visible; transition: transform .25s ease; }
+  .sb-fondo { display: block; position: fixed; inset: 0; z-index: 40; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .25s; }
+  .sb-fondo.visible { opacity: 1; pointer-events: auto; }
+  .sb-cerrar { display: grid; place-items: center; align-self: flex-end; width: 40px; height: 40px; margin: -8px -6px -14px 0; border: 1px solid var(--linea); background: transparent; color: var(--tinta); font-size: 1rem; cursor: pointer; }
+  [data-tema='diario'] .contenido { margin: 12px auto; width: calc(100% - 24px); }
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .hero-visual { order: -1; }
+  .perfil-grilla { grid-template-columns: minmax(0, 1fr); }
+  .perfil-lateral { position: static; order: -1; max-width: 280px; }
+  .franja-centro { display: none; }
+}
+
+@media (max-width: 600px) {
+  .arbol-lista { padding-left: 12px; }
+  .nodo-nota { margin-left: 14px; }
+  .grilla-pelis { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .contenido { padding: 18px 16px 36px; }
+  .tarjeta-serie { grid-template-columns: 84px minmax(0, 1fr); }
+  .tarjeta-serie img, .serie-sin-imagen { width: 84px; }
+  .entrada-btn { grid-template-columns: minmax(0, 1fr) auto; }
+  .entrada-fecha { grid-column: 1 / -1; }
+  .entrada-signo { grid-row: 2; grid-column: 2; }
+  .entrada .insignia { display: none; }
+  .nav-perfil .btn { flex: 1 1 100%; }
+  .franja { font-size: .66rem; letter-spacing: .08em; }
+}
+
+@media (max-width: 400px) {
+  .franja span:first-child { display: none; }
+  .franja { justify-content: center; }
+  .grilla-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grilla-5 .tarjeta { padding: 10px; }
+  .tarjeta-tag { top: 16px; left: 16px; }
+  .btn { padding-inline: .8rem; }
+}

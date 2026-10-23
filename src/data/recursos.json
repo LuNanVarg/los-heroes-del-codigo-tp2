@@ -1,0 +1,193 @@
+[
+  {
+    "id": 1,
+    "nombre": "HTML5",
+    "categoria": "Lenguaje",
+    "descripcion": "Lenguaje de marcado para estructurar páginas web.",
+    "aporte": "Estructura semántica de las páginas del TP1; en el TP2 se escribe como JSX dentro de los componentes.",
+    "url": "https://developer.mozilla.org/es/docs/Web/HTML",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 2,
+    "nombre": "CSS3",
+    "categoria": "Lenguaje",
+    "descripcion": "Lenguaje de estilos para definir la presentación de una página.",
+    "aporte": "Grid, Flexbox, variables CSS y media queries en las dos entregas; en el TP2 cada edición es un conjunto de variables.",
+    "url": "https://developer.mozilla.org/es/docs/Web/CSS",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 3,
+    "nombre": "JavaScript (ES6+)",
+    "categoria": "Lenguaje",
+    "descripcion": "Lenguaje de programación de la web.",
+    "aporte": "Interacciones de los perfiles, selector de edición y toda la lógica de los componentes de React.",
+    "url": "https://developer.mozilla.org/es/docs/Web/JavaScript",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 4,
+    "nombre": "React",
+    "categoria": "Librería",
+    "descripcion": "Biblioteca para construir interfaces a partir de componentes reutilizables.",
+    "aporte": "TP2: toda la aplicación se arma con componentes que reciben datos por props.",
+    "url": "https://react.dev/",
+    "etapa": "TP2"
+  },
+  {
+    "id": 5,
+    "nombre": "React Router",
+    "categoria": "Librería",
+    "descripcion": "Navegación entre pantallas sin recargar la página.",
+    "aporte": "TP2: define las rutas de la portada, los perfiles, los recursos, la API, el árbol y la bitácora.",
+    "url": "https://reactrouter.com/",
+    "etapa": "TP2"
+  },
+  {
+    "id": 6,
+    "nombre": "Vite",
+    "categoria": "Herramienta",
+    "descripcion": "Servidor de desarrollo y empaquetador para proyectos web modernos.",
+    "aporte": "TP2: levanta el proyecto en local y genera la versión de producción que se publica.",
+    "url": "https://vite.dev/",
+    "etapa": "TP2"
+  },
+  {
+    "id": 7,
+    "nombre": "Node.js",
+    "categoria": "Herramienta",
+    "descripcion": "Entorno para ejecutar JavaScript fuera del navegador.",
+    "aporte": "TP2: necesario para correr Vite y las dependencias del proyecto.",
+    "url": "https://nodejs.org/es",
+    "etapa": "TP2"
+  },
+  {
+    "id": 8,
+    "nombre": "npm",
+    "categoria": "Herramienta",
+    "descripcion": "Gestor de paquetes de JavaScript.",
+    "aporte": "TP2: instala React, React Router y Vite.",
+    "url": "https://www.npmjs.com/",
+    "etapa": "TP2"
+  },
+  {
+    "id": 9,
+    "nombre": "Git",
+    "categoria": "Herramienta",
+    "descripcion": "Sistema de control de versiones distribuido.",
+    "aporte": "Historial de cambios y trabajo por ramas del equipo.",
+    "url": "https://git-scm.com/",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 10,
+    "nombre": "GitHub",
+    "categoria": "Publicación",
+    "descripcion": "Plataforma para alojar repositorios y colaborar en equipo.",
+    "aporte": "Repositorios del grupo, invitaciones a integrantes y Pull Requests.",
+    "url": "https://github.com/",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 11,
+    "nombre": "Vercel",
+    "categoria": "Publicación",
+    "descripcion": "Plataforma de despliegue para aplicaciones web.",
+    "aporte": "Publica el sitio del TP1 y la aplicación del TP2.",
+    "url": "https://vercel.com/",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 12,
+    "nombre": "Visual Studio Code",
+    "categoria": "Herramienta",
+    "descripcion": "Editor de código con extensiones.",
+    "aporte": "Editor para escribir, probar y depurar el código del proyecto.",
+    "url": "https://code.visualstudio.com/",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 13,
+    "nombre": "Figma",
+    "categoria": "Diseño",
+    "descripcion": "Herramienta de diseño de interfaces y prototipos.",
+    "aporte": "Maquetas y guía de estilos (fuentes y paleta) del TP1.",
+    "url": "https://www.figma.com/",
+    "etapa": "TP1"
+  },
+  {
+    "id": 14,
+    "nombre": "Google Fonts",
+    "categoria": "Diseño",
+    "descripcion": "Biblioteca gratuita de tipografías para la web.",
+    "aporte": "Bebas Neue y Vollkorn en el TP1; Old Standard TT, UnifrakturCook, Playfair Display, Barlow y Share Tech Mono en las ediciones del TP2.",
+    "url": "https://fonts.google.com/",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 15,
+    "nombre": "Octicons",
+    "categoria": "Diseño",
+    "descripcion": "Set de íconos de GitHub (licencia MIT).",
+    "aporte": "La marca de GitHub en los botones de cada perfil.",
+    "url": "https://primer.style/foundations/icons",
+    "etapa": "TP2"
+  },
+  {
+    "id": 16,
+    "nombre": "SVG",
+    "categoria": "Formato",
+    "descripcion": "Formato de imagen vectorial: escala sin perder nitidez.",
+    "aporte": "Íconos, favicon y las ilustraciones del panel holográfico y del sello de diario.",
+    "url": "https://developer.mozilla.org/es/docs/Web/SVG",
+    "etapa": "TP2"
+  },
+  {
+    "id": 17,
+    "nombre": "WebP",
+    "categoria": "Formato",
+    "descripcion": "Formato de imagen comprimida para la web.",
+    "aporte": "Fotos de integrantes y afiches optimizados: de unos 11 MB a 1,4 MB.",
+    "url": "https://developers.google.com/speed/webp",
+    "etapa": "TP2"
+  },
+  {
+    "id": 18,
+    "nombre": "MDN Web Docs",
+    "categoria": "Recurso",
+    "descripcion": "Documentación de referencia sobre tecnologías web.",
+    "aporte": "Referencia para consultar propiedades de CSS, HTML y APIs de JavaScript.",
+    "url": "https://developer.mozilla.org/es/",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 19,
+    "nombre": "TVmaze API",
+    "categoria": "Recurso",
+    "descripcion": "API pública y gratuita con información de series de TV.",
+    "aporte": "Alimenta la sección «API pública» de esta aplicación.",
+    "url": "https://www.tvmaze.com/api",
+    "etapa": "TP2"
+  },
+  {
+    "id": 20,
+    "nombre": "Wikipedia",
+    "categoria": "Recurso",
+    "descripcion": "Enciclopedia en línea.",
+    "aporte": "Destino de los enlaces de las películas favoritas de cada perfil.",
+    "url": "https://es.wikipedia.org/",
+    "etapa": "Ambos"
+  },
+  {
+    "id": 21,
+    "nombre": "localStorage",
+    "categoria": "Herramienta",
+    "descripcion": "Almacenamiento del navegador que persiste entre visitas.",
+    "aporte": "Guarda la edición elegida (Diario o Futurista).",
+    "url": "https://developer.mozilla.org/es/docs/Web/API/Window/localStorage",
+    "etapa": "Ambos"
+  },
+  {
+  }
+]
