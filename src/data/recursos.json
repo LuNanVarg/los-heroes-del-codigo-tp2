@@ -188,6 +188,49 @@
     "url": "https://developer.mozilla.org/es/docs/Web/API/Window/localStorage",
     "etapa": "Ambos"
   },
+{
+    "id": 22,
+    "nombre": "Ghost in the Shell • Territory Studio",
+    "categoria": "Recurso",
+    "descripcion": "Diseño de interfaces holográficas del estudio Territory Studio para la película.",
+    "aporte": "Referencia visual de la edición Futurista: negro profundo, tipografía serif grande y gráficos de datos.",
+    "url": "https://territorystudio.com/project/ghost-in-the-shell/",
+    "etapa": "TP2"
+  },
   {
+    "id": 23,
+    "nombre": "Claude",
+    "categoria": "IA",
+    "descripcion": "Asistente de inteligencia artificial de Anthropic.",
+    "aporte": "Rediseño de las ediciones, íconos e imágenes optimizadas, TP1, TP2.",
+    "url": "https://claude.ai/",
+    "etapa": "TP2"
+  },
+  {
+    "id": 24,
+    "nombre": "Gemini",
+    "categoria": "IA",
+    "descripcion": "Asistente de inteligencia artificial de Google.",
+    "aporte": "Asistencia técnica del TP1, TP2",
+    "url": "https://gemini.google.com/",
+    "etapa": "TP1"
+  },
+  {
+    "id": 25,
+    "nombre": "OpenCode",
+    "categoria": "IA",
+    "descripcion": "Agente de programación de código abierto para la terminal.",
+    "aporte": "Asistencia técnica del TP1, TP2",
+    "url": "https://opencode.ai/",
+    "etapa": "TP1"
+  },
+  {
+    "id": 26,
+    "nombre": "Flexbox",
+    "categoria": "Lenguaje",
+    "descripcion": "Qué es, en una frase.",
+    "aporte": "Cómo lo usamos NOSOTROS en el proyecto.",
+    "url": "https://developer.mozilla.org/es/docs/Web/CSS/CSS_flexible_box_layout",
+    "etapa": "TP2"
   }
 ]
