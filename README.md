@@ -39,7 +39,7 @@ Si no hay una preferencia guardada, la edición inicial se adapta al modo claro 
 * **Proyecto anterior (TP1):** https://los-heroes-del-codigo.vercel.app/
 
 ## Integrantes
-```
+
 | Integrante | Perfil de GitHub | Responsabilidad en el TP2 |
 |---|---|---|
 | Alcaraz, Marisol | [Marisol14](https://github.com/Marisol14) | Títulos y descripciones de cada sección: hook `src/hooks/useTitulo.js`. |
@@ -47,7 +47,7 @@ Si no hay una preferencia guardada, la edición inicial se adapta al modo claro 
 | Cardozo, Anahi | [anniecpk](https://github.com/anniecpk) | Ícono del botón hamburguesa del menú móvil: `src/components/IconoHamburguesa.jsx`. |
 | Cattalín, Ezequiel | [nilattac](https://github.com/nilattac) | Pruebas automáticas de la consulta a la API: `src/tests/tvmaze.test.js`. |
 | Vargas, Nancy | [LuNanVarg](https://github.com/LuNanVarg) | Base de la aplicación y de las dos ediciones (con IA), README, bitácora, documentación y entrega. |
-```
+
 Cada integrante trabaja en su propio archivo.
 
 ## Capturas
@@ -59,7 +59,7 @@ Cada integrante trabaja en su propio archivo.
 | ![Recursos con búsqueda y filtros](docs/capturas/05-recursos-futurista.webp)<br>**Recursos · Futurista** | ![Árbol de render](docs/capturas/06-arbol-futurista.webp)<br>**Árbol de render · Futurista** |
 
 ## Secciones de la aplicación
-```
+
 | Ruta | Sección | Qué contiene |
 |---|---|---|
 | `/` | Portada | Presentación del equipo, revelador interactivo, tarjetas de integrantes y accesos a las demás secciones. |
@@ -68,7 +68,7 @@ Cada integrante trabaja en su propio archivo.
 | `/api` | API pública | Consulta a la API de [TVmaze](https://www.tvmaze.com/api) con mensaje de carga, mensajes de error específicos (404, 429, servidor caído, sin conexión) y un tiempo máximo de espera de 8 segundos, y botones para reintentar y actualizar. |
 | `/arbol` | Árbol de renderizado | Jerarquía real de componentes, con nodos que se expanden y se contraen. |
 | `/bitacora` | Bitácora | Registros del TP1 y del TP2, con filtro por etapa y desplegables. |
-```
+
 
 **Interacciones de cada perfil** (además de la «Cita editorial» con *Nueva frase*, que tienen todos): Marisol, la foto alterna entre color y blanco y negro · Marcos, sinopsis desplegables en las películas · Anahi, dato desplegable en cada disco · Ezequiel, contador de veces que vio cada película · Nancy, descripción al hacer click en cada habilidad.
 
@@ -77,7 +77,7 @@ Cada integrante trabaja en su propio archivo.
 **API pública (TVmaze):** no requiere clave y se consulta desde el navegador. Si no responde en 8 segundos se muestra un error en vez de quedar cargando. Por cada serie devuelve nombre, año de estreno, idioma, puntaje, géneros, resumen e imagen. Se eligió por afinidad con nuestra referencia visual (*Ghost in the Shell*).
 
 ## Identidad visual
-```
+
 | | Diario | Futurista |
 |---|---|---|
 | Idea | Diario viejo, tinta sobre papel de prensa | Revista sci-fi, interfaz holográfica |
@@ -87,7 +87,7 @@ Cada integrante trabaja en su propio archivo.
 | Tinta / texto | `#1F1A12` | `#EEF2F3` |
 | Fondo | Papel `#E2D8BD` con grano, manchas y viñeta (CSS) | Negro `#000000` |
 | Acento | Rojo desteñido `#9C1C1C` | Teal apagado `#8FD0CF` y magenta `#E0457B` (solo detalles) |
-```
+
 
 * **Imágenes propias del proyecto:** los íconos (`Iconos.jsx`), el favicon y dos ilustraciones en SVG hechas para esta aplicación: el panel holográfico (`public/img/hud-holograma.svg`) y su «gemelo» de diario impreso con sello (`public/img/diario-sello.svg`), que se muestran según la edición. Las fotos de los integrantes y los afiches de películas están optimizados a WebP.
 * **Accesibilidad:** enlace «Saltar al contenido», foco visible, `aria-expanded`/`aria-pressed` en los controles, mensajes de estado con `role="status"` y `role="alert"`, y animaciones que se desactivan con `prefers-reduced-motion`.
@@ -149,7 +149,7 @@ npm run preview   # Previsualizar la versión de producción
 ## Declaración de uso de IA
 
 Se diferencia la **aplicación** desde la que se trabajó del **modelo** empleado.
-```
+
 | Integrante | Aplicación | Modelo | Contenidos o tareas |
 |---|---|---|---|
 | Vargas, Nancy | Claude y ChatGPT | Claude Sonnet 5.5 y modelos de ChatGPT utilizados | Rediseño de las ediciones Diario y Futurista; creación de íconos, favicon e ilustraciones SVG; optimización de imágenes WebP; desarrollo de la base de la aplicación React, rutas, componentes, datos y consulta a la API. |
@@ -157,7 +157,6 @@ Se diferencia la **aplicación** desde la que se trabajó del **modelo** emplead
 | Artine, Marcos | ChatGPT y Claude | Modelos utilizados en cada aplicación | Asistencia en la ampliación del catálogo de recursos en `recursos.json`. |
 | Cardozo, Anahi | ChatGPT y Claude | Modelos utilizados en cada aplicación | Asistencia en la implementación del ícono del menú móvil en `IconoHamburguesa.jsx`. |
 | Cattalín, Ezequiel | ChatGPT y Claude | Modelos utilizados en cada aplicación | Asistencia en la incorporación de pruebas automáticas para la consulta a la API en `tvmaze.test.js`. |
-```
 
 **Decisiones del equipo (criterio propio):** elegir la estética de las dos ediciones y sus referencias (*Ghost in the Shell*, el diario viejo y el comparador «antes y después»); pedir que el modo Futurista tuviera menos color porque cansaba la vista; quitar la edición Vintage del TP1 por parecerse al Diario; continuar con los perfiles y la bitácora del TP1 dentro de la nueva aplicación; y revisar y probar el resultado.
 
