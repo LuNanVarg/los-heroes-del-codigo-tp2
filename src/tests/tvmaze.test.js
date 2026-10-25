@@ -98,3 +98,33 @@ test('si ya viene cancelada, no llega a consultar', async () => {
   const control = new AbortController(); control.abort();
   await assert.rejects(buscarSeries('x', { fetchFn: fetchColgado, signal: control.signal }), (e) => e.name === 'AbortError');
 });
+
+test('una búsqueda con tildes y ñ se codifica bien en la URL', async () => {
+  let urlPedida = '';
+  const fetchFn = async (url) => { urlPedida = url; return respuesta([]); };
+  await buscarSeries('Pingüino ñandú', { fetchFn });
+  assert.equal(urlPedida, `${URL_BUSQUEDA}?q=${encodeURIComponent('Pingüino ñandú')}`);
+  assert.ok(urlPedida.includes('%C3%BC'), 'la ü tiene que ir codificada'); // ü
+  assert.ok(urlPedida.includes('%C3%B1'), 'la ñ tiene que ir codificada'); // ñ
+});
+
+test('limpiarHtml deja comillas y apóstrofes normales', () => {
+  assert.equal(limpiarHtml('<p>Dijo &quot;hola&quot; y &#39;chau&#39;</p>'), `Dijo "hola" y 'chau'`);
+});
+
+test('una serie con puntaje null devuelve puntaje null', () => {
+  const s = normalizarSerie({ id: 2, name: 'Sin puntaje', rating: { average: null }, url: 'https://www.tvmaze.com/shows/2' });
+  assert.equal(s.puntaje, null);
+});
+
+test('una imagen que ya es https no se modifica', () => {
+  const s = normalizarSerie({ ...SERIE, image: { medium: 'https://static.tvmaze.com/b.jpg' } });
+  assert.equal(s.imagen, 'https://static.tvmaze.com/b.jpg');
+});
+
+test('el mensaje de timeout dice los segundos configurados', async () => {
+  await assert.rejects(
+    buscarSeries('x', { fetchFn: fetchColgado, timeoutMs: 2000 }),
+    (e) => e instanceof ErrorApi && /2 segundos/.test(e.message)
+  );
+});
