@@ -345,7 +345,7 @@ a.tarjeta:hover { transform: translateY(-3px); border-color: var(--tinta); }
   [data-tema='diario'] .topbar { border-bottom: 4px double var(--tinta); }
   .tb-marca { font-family: var(--fuente-marca); font-size: 1.35rem; font-weight: 700; text-decoration: none; line-height: 1; }
   [data-tema='futurista'] .tb-marca { font-size: .8rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: var(--acento); }
-  .tb-menu { padding: .45rem .9rem; }
+  .tb-menu { width: 44px; height: 44px; padding: 0; }
   .sidebar { position: fixed; inset: 0 auto 0 0; width: min(86vw, 320px); height: 100%; transform: translateX(-102%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; z-index: 50; box-shadow: 8px 0 30px rgba(0,0,0,.35); }
   .sidebar.abierta { transform: none; visibility: visible; transition: transform .25s ease; }
   .sb-fondo { display: block; position: fixed; inset: 0; z-index: 40; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .25s; }

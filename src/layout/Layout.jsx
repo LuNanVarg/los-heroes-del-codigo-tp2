@@ -34,9 +34,10 @@ export default function Layout() {
 
       <header className="topbar">
         <Link to="/" className="tb-marca">NEWS: Héroes del código</Link>
-        <button type="button" className="btn tb-menu" aria-expanded={abierta} aria-controls="barra-lateral" onClick={() => setAbierta((a) => !a)}>
+        <button type="button" className="btn tb-menu" aria-expanded={abierta} aria-controls="barra-lateral"
+        aria-label={abierta ? 'Cerrar menú' : 'Abrir menú'}
+        onClick={() => setAbierta((a) => !a)}>
           <IconoHamburguesa abierta={abierta} />
-          <span>{abierta ? 'Cerrar' : 'Menú'}</span>
         </button>
       </header>
 
