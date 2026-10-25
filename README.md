@@ -34,8 +34,8 @@ Si no hay una preferencia guardada, la edición inicial se adapta al modo claro 
 
 ## Apicación publicada
 
-* **Sitio publicado en Vercel:**  `https://________.vercel.app`
-* **Repositorio:** `https://github.com/________/________`
+* **Sitio publicado en Vercel:**  `[https://________.vercel.app](https://los-heroes-del-codigo-tp2.vercel.app/)`
+* **Repositorio:** `[https://github.com/________/________](https://github.com/LuNanVarg/los-heroes-del-codigo-tp2)`
 * **Proyecto anterior (TP1):** https://los-heroes-del-codigo.vercel.app/
 
 ## Integrantes
