@@ -32,11 +32,11 @@ La aplicación tiene **dos ediciones** que se alternan con el botón del menú l
 
 Si no hay una preferencia guardada, la edición inicial se adapta al modo claro u oscuro del sistema.
 
-## Apicación publicada
+## Aplicación publicada
 
-* **Sitio publicado en Vercel:**  `[https://________.vercel.app](https://los-heroes-del-codigo-tp2.vercel.app/)`
-* **Repositorio:** `[https://github.com/________/________](https://github.com/LuNanVarg/los-heroes-del-codigo-tp2)`
-* **Proyecto anterior (TP1):** https://los-heroes-del-codigo.vercel.app/
+* **Sitio publicado en Vercel:** [https://los-heroes-del-codigo-tp2.vercel.app](https://los-heroes-del-codigo-tp2.vercel.app/)
+* **Repositorio:** [https://github.com/LuNanVarg/los-heroes-del-codigo-tp2](https://github.com/LuNanVarg/los-heroes-del-codigo-tp2)
+* **Proyecto anterior (TP1):** [https://los-heroes-del-codigo.vercel.app](https://los-heroes-del-codigo.vercel.app/)
 
 ## Integrantes
 
