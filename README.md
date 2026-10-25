@@ -1,6 +1,7 @@
 # Los Héroes del Código · TP2 
 
 **Desarrollo de Sistemas Web Front End · TSDS · IFTS N°29 · Ciclo 2026 · Grupo 17**
+
 Docente: [Martínez, Luciano](https://lucianomartinez.ar/)
 
 Aplicación React que continúa el proyecto del [TP1](https://los-heroes-del-codigo.vercel.app/)
