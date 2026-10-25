@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+const TITULO_BASE = 'Los Héroes del Código';
+
 const DESCRIPCIONES = {
   '': 'Los Héroes del Código, Grupo 17: portada del equipo, perfiles de sus cinco integrantes y una aplicación React con dos ediciones, Diario y Futurista.',
   'Recursos': 'Catálogo de herramientas, lenguajes y referencias que usa el equipo, con búsqueda y filtros.',
@@ -10,23 +12,21 @@ const DESCRIPCIONES = {
   'Perfil no encontrado': 'No hay ningún integrante con ese nombre. Volvé a la portada de Los Héroes del Código.',
 };
 
-const descripcionPara = (titulo) =>
-  DESCRIPCIONES[titulo] ?? `Perfil de ${titulo}, integrante de Los Héroes del Código (Grupo 17).`;
+const descripcionPara = (titulo) => {
+  if (!titulo) return DESCRIPCIONES[''];
+  return Object.hasOwn(DESCRIPCIONES, titulo)
+    ? DESCRIPCIONES[titulo]
+    : `Perfil de ${titulo}, integrante de Los Héroes del Código (Grupo 17).`;
+};
 
 export function useTitulo(titulo, descripcion) {
   useEffect(() => {
-    const tituloAnterior = document.title;
+    document.title = titulo
+      ? `${titulo} · ${TITULO_BASE}`
+      : `${TITULO_BASE} · Grupo 17`;
+
     const meta = document.querySelector('meta[name="description"]');
-    const descripcionAnterior = meta ? meta.getAttribute('content') : null;
-
-    document.title = titulo ? `${titulo} · Los Héroes del Código` : 'Los Héroes del Código · Grupo 17';
     if (meta) meta.setAttribute('content', descripcion || descripcionPara(titulo));
-
-    return () => {
-      document.title = tituloAnterior;
-      if (meta && descripcionAnterior !== null) meta.setAttribute('content', descripcionAnterior);
-    };
   }, [titulo, descripcion]);
 }
-
 
