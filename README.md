@@ -153,10 +153,10 @@ Se diferencia la **aplicación** desde la que se trabajó del **modelo** emplead
 | Integrante | Aplicación | Modelo | Contenidos o tareas |
 |---|---|---|---|
 | Vargas, Nancy | Claude | Claude Sonnet 5.5  | Rediseño de las ediciones Diario y Futurista; creación de íconos |
-| Alcaraz, Marisol | Claude | Modelo utilizado en cada aplicación | Asistencia en la actualización de títulos y descripciones de las secciones mediante `useTitulo.js`. |
-| Artine, Marcos | Claude | Modelo utilizado en cada aplicación | Asistencia en la ampliación del catálogo de recursos en `recursos.json`. |
-| Cardozo, Anahi | Claude | Modelo utilizado en cada aplicación | Asistencia en la implementación del ícono del menú móvil en `IconoHamburguesa.jsx`. |
-| Cattalín, Ezequiel | Claude | Modelo utilizado en cada aplicación | Asistencia en la incorporación de pruebas automáticas para la consulta a la API en `tvmaze.test.js`. |
+| Alcaraz, Marisol | Claude | Claude Sonnet 5.5 | Asistencia en la actualización de títulos y descripciones. |
+| Artine, Marcos | Claude | Claude Sonnet 5.5  | Asistencia en la ampliación. |
+| Cardozo, Anahi | Claude | Claude Sonnet 5.5  | Asistencia en la implementación del ícono. |
+| Cattalín, Ezequiel | Claude | Claude Sonnet 5.5  | Asistencia en la incorporación de pruebas. |
 
 **Decisiones del equipo (criterio propio):** elegir la estética de las dos ediciones y sus referencias (*Ghost in the Shell*, el diario viejo y el comparador «antes y después»); pedir que el modo Futurista tuviera menos color porque cansaba la vista; quitar la edición Vintage del TP1 por parecerse al Diario; continuar con los perfiles y la bitácora del TP1 dentro de la nueva aplicación; y revisar y probar el resultado.
 
