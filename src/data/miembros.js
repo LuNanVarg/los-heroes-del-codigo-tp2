@@ -64,7 +64,7 @@ export const miembros = [
     habilidades: [{ nombre: 'Autocad scripts / Automatización' }, { nombre: 'Python / Java' }, { nombre: 'GitHub / Git / Vercel' }, { nombre: 'MySQL / PostgreSQL' }],
     peliculas: [
       { titulo: 'The Shawshank Redemption', direccion: 'Frank Darabont', img: '/img/eze/peli-shawshank.webp', wiki: 'https://es.wikipedia.org/wiki/The_Shawshank_Redemption' },
-      { titulo: 'Band of Brothers', direccion: 'Erik • Tom • otros', img: '/img/eze/peli-band.webp', wiki: 'https://es.wikipedia.org/wiki/Band_of_Brothers' },
+      { titulo: 'Band of Brothers', direccion: 'Varios directores (entre ellos Tom Hanks y David Frankel)', img: '/img/eze/peli-band.webp', wiki: 'https://es.wikipedia.org/wiki/Band_of_Brothers' },
       { titulo: 'Station Eleven', direccion: 'Hiro Murai', img: '/img/eze/peli-station.webp', wiki: 'https://en.wikipedia.org/wiki/Station_Eleven_(miniseries)' },
     ],
     discos: [{ titulo: 'Californication', artista: 'Red Hot Chili Peppers' }, { titulo: 'Toxicity', artista: 'System of a Down' }, { titulo: 'El embrujo', artista: 'Mario Pereyra' }],
