@@ -57,7 +57,7 @@ export const miembros = [
     citas: ['Todo lo puedo en Cristo que me fortalece.', 'El Señor es mi pastor, nada me faltará.', 'Confía en el Señor con todo tu corazón.'],
   },
   {
-    slug: 'ezequiel', figura: '04', nombre: 'Ezequiel Cattalín', corto: 'Ezequiel', rol: 'Ingeniero Civil &amp; Estudiante de Desarrollo de Software',
+    slug: 'ezequiel', figura: '04', nombre: 'Ezequiel Cattalín', corto: 'Ezequiel', rol: 'Ingeniero Civil & Desarrollador de Software',
     ciudad: 'Santo Tomé, Santa Fe', edad: 40,
     github: 'https://github.com/nilattac', portfolio: 'https://pfo-1-cattalin-landing-personal.vercel.app/',
     foto: '/img/ezequiel.webp', contador: true,
