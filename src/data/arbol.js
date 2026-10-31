@@ -27,6 +27,9 @@ export const arbol = {
                   { nombre: 'ListaDiscos', archivo: 'components/ListaDiscos.jsx', nota: 'Discos; en Anahi cada uno despliega un dato.' },
                   { nombre: 'CitaEditorial', archivo: 'components/CitaEditorial.jsx', nota: 'Botón «Nueva frase» con citas al azar.' },
                   { nombre: 'NavegacionPerfil', archivo: 'components/NavegacionPerfil.jsx', nota: 'Anterior, volver a la portada y siguiente.' },
+                  { nombre: 'NavegacionPerfil', archivo: 'components/NavegacionPerfil.jsx', nota: 'Anterior, volver a la portada y siguiente.' },
+                  { nombre: 'NoEncontrada', archivo: 'pages/NoEncontrada.jsx', nota: 'Se muestra en lugar del perfil si el slug de la URL no existe.' },
+                ] },
                 ] },
               { nombre: 'Recursos', archivo: 'pages/Recursos.jsx', nota: 'Ruta «/recursos». Lee recursos.json, con búsqueda y filtros.',
                 hijos: [
