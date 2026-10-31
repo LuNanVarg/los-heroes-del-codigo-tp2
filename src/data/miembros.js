@@ -25,10 +25,10 @@ export const miembros = [
     ciudad: 'Buenos Aires, Argentina', edad: 34,
     github: 'https://github.com/MarcosArtine', portfolio: 'https://artine-marcos.vercel.app/',
     foto: '/img/marcos.webp',
-    habilidades: [{ nombre: 'Diseño y Desarrollo Web' }, { nombre: 'GitHub / Git' }, { nombre: 'PHP / Laravel / C#' }, { nombre: 'MySQL / PostgreSQL' }],
+    habilidades: [{ nombre: 'Frontend: HTML5 / CSS3 / Bootstrap' }, { nombre: 'JavaScript / TypeScript / React' }, { nombre: 'Node.js / Express / PHP / Laravel' }, { nombre: 'MySQL / PostgreSQL / Sequelize' }],
     peliculas: [
       { titulo: 'Mulán', direccion: 'Tony Bancroft • Barry Cook', img: '/img/marc/peli-mulan.webp', wiki: 'https://es.wikipedia.org/wiki/Mulan', sinopsis: 'Una joven se hace pasar por soldado para salvar a su familia.' },
-      { titulo: 'El camino hacia El Dorado', direccion: 'Bibo Bergeron • Don Paul • Jeffrey Katzenberg', img: '/img/marc/peli-camino.webp', wiki: 'https://es.wikipedia.org/wiki/The_Road_to_El_Dorado', sinopsis: 'Un joven explorador y su amigo descubren un reino mítico llamado El Dorado.' },
+      { titulo: 'El camino hacia El Dorado', direccion: 'Bibo Bergeron • Don Paul', img: '/img/marc/peli-camino.webp', wiki: 'https://es.wikipedia.org/wiki/The_Road_to_El_Dorado', sinopsis: 'Un joven explorador y su amigo descubren un reino mítico llamado El Dorado.' },
       { titulo: 'V de venganza', direccion: 'James McTeigue', img: '/img/marc/peli-v.webp', wiki: 'https://es.wikipedia.org/wiki/V_for_Vendetta_(pel%C3%ADcula)', sinopsis: 'En un futuro distópico, un hombre lucha contra un régimen opresivo.' },
     ],
     discos: [{ titulo: 'Señales', artista: 'Callejeros' }, { titulo: 'Confecciones de invierno', artista: 'Sui Generis' }, { titulo: 'Un baión para el ojo idiota', artista: 'Los redonditos de ricota' }],
@@ -57,11 +57,11 @@ export const miembros = [
     citas: ['Todo lo puedo en Cristo que me fortalece.', 'El Señor es mi pastor, nada me faltará.', 'Confía en el Señor con todo tu corazón.'],
   },
   {
-    slug: 'ezequiel', figura: '04', nombre: 'Ezequiel Cattalín', corto: 'Ezequiel', rol: 'Development & Ingeniero Civil',
+    slug: 'ezequiel', figura: '04', nombre: 'Ezequiel Cattalín', corto: 'Ezequiel', rol: 'Ingeniero Civil &amp; Estudiante de Desarrollo de Software',
     ciudad: 'Santo Tomé, Santa Fe', edad: 40,
     github: 'https://github.com/nilattac', portfolio: 'https://pfo-1-cattalin-landing-personal.vercel.app/',
     foto: '/img/ezequiel.webp', contador: true,
-    habilidades: [{ nombre: 'Diseño y Desarrollo Web' }, { nombre: 'GitHub / Git' }, { nombre: 'PHP / Laravel / C#' }, { nombre: 'MySQL / PostgreSQL' }],
+    habilidades: [{ nombre: 'Autocad scripts / Automatización' }, { nombre: 'Python / Java' }, { nombre: 'GitHub / Git / Vercel' }, { nombre: 'MySQL / PostgreSQL' }],
     peliculas: [
       { titulo: 'The Shawshank Redemption', direccion: 'Frank Darabont', img: '/img/eze/peli-shawshank.webp', wiki: 'https://es.wikipedia.org/wiki/The_Shawshank_Redemption' },
       { titulo: 'Band of Brothers', direccion: 'Erik • Tom • otros', img: '/img/eze/peli-band.webp', wiki: 'https://es.wikipedia.org/wiki/Band_of_Brothers' },
