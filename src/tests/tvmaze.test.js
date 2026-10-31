@@ -1,6 +1,3 @@
-// =====================================================================================
-// TAREA DE EZEQUIEL · pruebas automáticas de la consulta a la API
-// =====================================================================================
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buscarSeries, limpiarHtml, mensajeParaEstado, normalizarSerie, ErrorApi, URL_BUSQUEDA } from '../lib/tvmaze.js';
