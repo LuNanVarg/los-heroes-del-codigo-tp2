@@ -19,4 +19,11 @@ export const bitacora = [
     texto: 'La aplicación se armó con Vite, React y React Router. Se definió una sidebar compartida como estructura de toda la experiencia y se portaron los cinco perfiles del TP1 como un solo componente que recibe sus datos por props. Se sumaron un catálogo de recursos con búsqueda y filtros, una consulta a una API pública con estados de carga y error, el árbol de componentes y esta bitácora.' },
   { id: 'tp2-4', fecha: '2026-10-22', etapa: 'TP2', titulo: 'Reparto de tareas del equipo',
   texto: 'Se distribuyeron las tareas por archivo para organizar el trabajo y evitar conflictos. Anahi trabaja en el ícono del menú; Marcos, en el catálogo de recursos; Marisol, en los títulos y descripciones; Ezequiel, en las pruebas de la API; y Nancy, en la documentación, la bitácora y la entrega. También se incorporó una prueba automática para validar el catálogo.'},
+  { id: 'tp2-5', fecha: '2026-10-25', etapa: 'TP2', titulo: 'Aportes por archivo y Pull Requests',
+    texto: 'Cada integrante trabajó en su archivo y se integró por Pull Request: Marcos amplió recursos.json, Ezequiel sumó las pruebas de la API, Marisol actualizó títulos y descripciones y Anahi agregó el ícono de la hamburguesa.' },
+  { id: 'tp2-6', fecha: '2026-10-25', etapa: 'TP2', titulo: 'Menú móvil más cómodo',
+    texto: 'Se quitó el texto del botón de menú y se agrandó el área de toque para que sea más fácil de usar en el celular.' },
+  { id: 'tp2-7', fecha: '2026-10-30', etapa: 'TP2', titulo: 'Revisión final contra la rúbrica',
+    texto: 'Antes de entregar se recorrieron los 15 criterios: se corrigieron enlaces del índice, habilidades y datos de los perfiles, y se verificó el acceso de todo el equipo al repositorio.' },
 ];
+
