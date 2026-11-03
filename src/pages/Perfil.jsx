@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { miembros } from '../data/miembros.js';
 import FotoPerfil from '../components/FotoPerfil.jsx';
+import SobreMi from '../components/SobreMi.jsx';
 import EtiquetaHabilidad from '../components/EtiquetaHabilidad.jsx';
 import TarjetaPelicula from '../components/TarjetaPelicula.jsx';
 import ListaDiscos from '../components/ListaDiscos.jsx';
 import CitaEditorial from '../components/CitaEditorial.jsx';
 import NavegacionPerfil from '../components/NavegacionPerfil.jsx';
-import { IconoGitHub, IconoWeb } from '../components/Iconos.jsx';
+import { IconoGitHub, IconoWeb, IconoUbicacion, IconoEdad } from '../components/Iconos.jsx';
 import NoEncontrada from './NoEncontrada.jsx';
 import { useTitulo } from '../hooks/useTitulo.js';
 
@@ -37,13 +38,17 @@ export default function Perfil() {
       <div className="perfil-grilla">
         <div className="perfil-principal">
           <section className="bloque-chico ficha-datos" aria-label="Datos personales">
-            <p><strong>Ciudad:</strong> {m.ciudad}</p>
-            <p><strong>Edad:</strong> {m.edad} años</p>
+            <ul className="datos-rapidos">
+              <li title="Ciudad"><IconoUbicacion /><span className="solo-lectores">Ciudad: </span>{m.ciudad}</li>
+              <li title="Edad"><IconoEdad /><span className="solo-lectores">Edad: </span>{m.edad}<span className="solo-lectores"> años</span></li>
+            </ul>
             <div className="perfil-enlaces">
               <a className="btn" href={m.github} target="_blank" rel="noopener noreferrer"><IconoGitHub /><span>GitHub</span></a>
               <a className="btn" href={m.portfolio} target="_blank" rel="noopener noreferrer"><IconoWeb /><span>Portfolio</span></a>
             </div>
           </section>
+
+          <SobreMi bio={m.bio} intereses={m.intereses} />
 
           <section className="bloque-chico" aria-labelledby="hab">
             <h2 id="hab">Habilidades técnicas</h2>

@@ -1,0 +1,25 @@
+/* ---------- Bitácora: relato en tres pasos (problema · decisión · resultado) ---------- */
+.entrada-num { white-space: nowrap; }
+.entrada-num::before { content: 'N.º '; }
+.entrada-num::after { content: ' · '; }
+[data-tema='futurista'] .entrada-num::before { content: 'LOG_'; }
+[data-tema='futurista'] .entrada-num::after { content: ' // '; color: var(--acento-2); }
+
+.relato { display: grid; gap: 4px; max-width: 76ch; }
+.relato-bloque { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 4px 18px; padding: 12px 0; border-top: 1px solid var(--linea-suave); }
+.relato-bloque h4 { padding-top: .22em; font-family: var(--fuente-datos); font-size: .74rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; color: var(--tinta-suave); }
+.relato-bloque p { margin: 0; }
+.relato-resultado { border-bottom: 1px solid var(--linea-suave); }
+.relato-resultado h4 { color: var(--acento); }
+[data-tema='diario'] .relato-bloque h4 { font-weight: 700; }
+[data-tema='diario'] .relato-problema p::first-letter { font-family: var(--fuente-titulo); font-size: 2.6em; line-height: .8; float: left; padding: .06em .1em 0 0; }
+[data-tema='futurista'] .relato-problema h4 { color: var(--acento-2); }
+[data-tema='futurista'] .relato-problema h4::before { content: '[!] '; }
+[data-tema='futurista'] .relato-decision h4::before { content: '[>] '; }
+[data-tema='futurista'] .relato-resultado h4::before { content: '[ok] '; }
+.relato-enlace { justify-self: start; margin-top: 6px; padding: .45rem .9rem; border: 1px solid var(--linea); font-family: var(--fuente-datos); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; }
+.relato-enlace::after { content: ' →'; }
+.relato-enlace:hover { background: var(--hover-bg); color: var(--hover-tx); }
+@media (max-width: 600px) {
+  .relato-bloque { grid-template-columns: minmax(0, 1fr); }
+}

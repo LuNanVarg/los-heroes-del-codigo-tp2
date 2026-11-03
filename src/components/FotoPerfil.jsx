@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function FotoPerfil({ src, nombre, figura, alternaColor = false }) {
   const [bn, setBn] = useState(false);
-  const imagen = <img src={src} alt={`Foto de ${nombre}`} className={bn ? 'foto-bn' : ''} width="640" height="640" />;
+  const imagen = <img src={src} alt={`Foto de ${nombre}`} className={bn ? 'foto-bn' : ''} width="640" height="640" decoding="async" fetchpriority="high" />;
   return (
     <figure className="foto-marco">
       {alternaColor ? (

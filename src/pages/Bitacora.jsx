@@ -15,7 +15,7 @@ export default function Bitacora() {
   return (
     <>
       <EncabezadoPagina etiqueta="Proceso del equipo" titulo="Bitácora">
-        El detrás de escena: qué hicimos, qué decidimos y qué dificultades resolvimos. Continúa la bitácora del TP1.
+        El detrás de escena. Cada registro del TP2 cuenta un problema, la decisión que tomamos y cómo resultó. Continúa la bitácora del TP1.
       </EncabezadoPagina>
 
       <div className="controles controles-fila">
@@ -31,7 +31,7 @@ export default function Bitacora() {
       </div>
 
       <div className="linea-tiempo">
-        {visibles.map((e, i) => <EntradaBitacora key={`${e.id}-${orden.version}`} entrada={e} orden={orden} abiertaInicial={i === visibles.length - 1} />)}
+        {visibles.map((e, i) => <EntradaBitacora key={`${e.id}-${orden.version}`} entrada={e} numero={bitacora.indexOf(e) + 1} orden={orden} abiertaInicial={i === visibles.length - 1} />)}
       </div>
     </>
   );

@@ -19,3 +19,17 @@ export const IconoWeb = () => (
     <rect x="6" y="11.5" width="5.5" height="5.5" fill="currentColor" stroke="none" /><rect x="13.5" y="11.5" width="4.5" height="5.5" fill="currentColor" stroke="none" />
   </svg>
 );
+
+export const IconoUbicacion = () => (
+  <svg {...base} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 21s-6.5-5.7-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.3 12 21 12 21z" /><circle cx="12" cy="10.5" r="2.3" />
+  </svg>
+);
+
+export const IconoEdad = () => (
+  <svg {...base} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 7v3" /><path d="M12 3.2c.9.9.9 1.9 0 2.8-.9-.9-.9-1.9 0-2.8z" />
+    <path d="M5 20v-6.5A1.5 1.5 0 0 1 6.5 12h11a1.5 1.5 0 0 1 1.5 1.5V20" /><path d="M3.5 20h17" />
+    <path d="M5 15.8c1.2 1 2.3 1 3.5 0s2.3-1 3.5 0 2.3 1 3.5 0 2.3-1 3.5 0" />
+  </svg>
+);

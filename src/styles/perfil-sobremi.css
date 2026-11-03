@@ -1,0 +1,14 @@
+/* ---------- Perfil: "Sobre mí" ---------- */
+.sobre-mi .bio { margin: 0 0 16px; max-width: 64ch; }
+.mini-titulo { margin: 0 0 8px; font-family: var(--fuente-datos); font-size: .72rem; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; color: var(--tinta-suave); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.chips li { padding: .25rem .75rem; border: 1px solid var(--linea-suave); font-family: var(--fuente-datos); font-size: .85rem; color: var(--tinta); }
+[data-tema='diario'] .chips li { background: var(--papel-2); border-color: var(--linea); font-style: italic; }
+[data-tema='futurista'] .chips li::before { content: '# '; color: var(--acento); }
+
+/* Entre 900 y 1100 px la columna de texto quedaba angosta (sidebar + foto a un costado):
+   la foto pasa arriba, como en el celular, y el contenido usa todo el ancho. */
+@media (max-width: 1100px) {
+  .perfil-grilla { grid-template-columns: minmax(0, 1fr); }
+  .perfil-lateral { position: static; order: -1; max-width: 280px; }
+}
