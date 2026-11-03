@@ -153,13 +153,13 @@ Se diferencia la **aplicación** desde la que se trabajó del **modelo** emplead
 
 | Integrante | Aplicación | Modelo | Contenidos o tareas |
 |---|---|---|---|
-| Vargas, Nancy | Claude | Claude Sonnet 5.5 | **Base de la aplicación:** estructura React, ediciones Futurista, README, bitácora y entrega. Reemplazarlo por íconos de palabras "ciudad" y "edad" (`Iconos.jsx`, `Perfil.jsx`); corrección de los enlaces del índice del README; redacción de las bios en primera persona a partir de los portfolios. **Criterio propio:** elegí qué cambios aplicar y los probé con `npm test`, `npm run build` y en el navegador. |
+| Vargas, Nancy | Claude | Claude Sonnet 5.5 | **Base de la aplicación:** estructura React, ediciones Futurista, README, bitácora y entrega. Reemplazarlo la palabras "ciudad" por el íconos de "ciudad" y "edad" (`Iconos.jsx`, `Perfil.jsx`); corrección de los enlaces del índice del README; redacción de las bios en primera persona a partir de los portfolios. **Criterio propio:** elegí qué cambios aplicar y los probé con `npm test`, `npm run build` y en el navegador. |
 | Alcaraz, Marisol | Claude | Claude Sonnet 5.5 | Títulos y descripciones de cada sección (`src/hooks/useTitulo.js`). Le pidió a Claude alternativas de títulos y descripciones y las adaptó al proyecto. |
 | Artine, Marcos | Claude | Claude Sonnet 5.5 | Ampliación del catálogo de recursos (`src/data/recursos.json`): sumó registros sobre Ghost in the Shell, Flexbox y las herramientas de IA del proyecto (Claude, Gemini y OpenCode), con asistencia de Claude. |
 | Cardozo, Anahi | Claude | Claude Sonnet 5.5 | Ícono de hamburguesa del menú móvil (`src/components/IconoHamburguesa.jsx`), con asistencia de Claude en la implementación. |
 | Cattalín, Ezequiel | Claude | Claude Sonnet 5.5 | Pruebas automáticas de la consulta a la API TVmaze (`src/tests/tvmaze.test.js`), con asistencia de Claude en su incorporación. |
 
-**Imágenes:** los avatares de los perfiles se generaron con IA desde la aplicación **Gemini** (Flash). El equipo fue modificando en varias iteraciones, ajustando estilo, colores y detalles hasta llegar a la versión actual.
+**Imágenes:** los avatares de los perfiles se generaron con IA desde la aplicación **Gemini** (3.8 Flash). El equipo fue modificando en varias iteraciones, ajustando estilo, colores y detalles hasta llegar a la versión actual.
 
 **Decisiones del equipo (criterio propio):** elegir la estética de las dos ediciones y sus referencias (*Ghost in the Shell*, el diario viejo y el comparador «antes y después»); pedir que el modo Futurista tuviera menos color porque cansaba la vista; quitar la edición Vintage del TP1 por parecerse al Diario; continuar con los perfiles y la bitácora del TP1 dentro de la nueva aplicación; escribir cada «Sobre mí» en primera persona con datos de su portfolio; y revisar y probar el resultado antes de cada Pull Request (`npm test` y `npm run build`).
 
