@@ -110,7 +110,7 @@ No se utilizan bibliotecas externas de componentes visuales ni de estilos.
 ├── index.html            (script que aplica la edición antes del primer render)
 ├── vercel.json           (reescritura para abrir y recargar cualquier ruta)
 ├── public/               (favicon e imágenes: fotos, afiches y SVG)
-├── docs/                 (TAREAS.md: capturas/: imágenes de este README)
+├── docs/                 (capturas/: imágenes de este README)
 ├── .github/              (plantilla de Pull Request)
 └── src/
     ├── main.jsx          (TemaProvider → BrowserRouter → App)
@@ -153,7 +153,7 @@ Se diferencia la **aplicación** desde la que se trabajó del **modelo** emplead
 
 | Integrante | Aplicación | Modelo | Contenidos o tareas |
 |---|---|---|---|
-| Vargas, Nancy | Claude | Claude Sonnet 5.5 | **Base de la aplicación:** estructura React, ediciones Futurista, README, bitácora y entrega. Reemplazarlo la palabras "ciudad" por el íconos de "ciudad" y "edad" (`Iconos.jsx`, `Perfil.jsx`); corrección de los enlaces del índice del README; redacción de las bios en primera persona a partir de los portfolios. **Criterio propio:** elegí qué cambios aplicar y los probé con `npm test`, `npm run build` y en el navegador. |
+| Vargas, Nancy | Claude | Claude Sonnet 5.5 | **Base de la aplicación:** estructura React, ediciones Futurista, README, bitácora y entrega. Reemplazo de las etiquetas «Ciudad» y «Edad» por íconos (`Iconos.jsx`, `Perfil.jsx`); corrección de los enlaces del índice del README; redacción de las bios en primera persona a partir de los portfolios. **Criterio propio:** elegí qué cambios aplicar y los probé con `npm test`, `npm run build` y en el navegador. |
 | Alcaraz, Marisol | Claude | Claude Sonnet 5.5 | Títulos y descripciones de cada sección (`src/hooks/useTitulo.js`). Le pidió a Claude alternativas de títulos y descripciones y las adaptó al proyecto. |
 | Artine, Marcos | Claude | Claude Sonnet 5.5 | Ampliación del catálogo de recursos (`src/data/recursos.json`): sumó registros sobre Ghost in the Shell, Flexbox y las herramientas de IA del proyecto (Claude, Gemini y OpenCode), con asistencia de Claude. |
 | Cardozo, Anahi | Claude | Claude Sonnet 5.5 | Ícono de hamburguesa del menú móvil (`src/components/IconoHamburguesa.jsx`), con asistencia de Claude en la implementación. |
